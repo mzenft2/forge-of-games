@@ -1,7 +1,9 @@
 syntax = "proto3";
+import "fixed_point_dto.proto";
 
 option csharp_namespace = "Ingweland.Fog.Inn.Models.Hoh";
 
 message HeroUnitColorDefinitionDTO {
   string id = 1;
+  map<string, FixedPointDTO> damage_factors = 3;
 }

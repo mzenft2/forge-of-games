@@ -1,15 +1,40 @@
 syntax = "proto3";
 import "fixed_point_dto.proto";
+import "google/protobuf/duration.proto";
 
 option csharp_namespace = "Ingweland.Fog.Inn.Models.Hoh";
-
-message HeroBattleConstantsDefinitionDTO {
-  reserved 6;
-  map<string, string> stat_to_formula = 4;
-  repeated HeroUnitStatBaseValueDto base_values = 11;
-}
 
 message HeroUnitStatBaseValueDto {
   string stat_id = 1;
   FixedPointDTO value = 2;
+}
+
+message HeroBattleConstantsDefinitionDTO {
+  reserved 6;
+  string id = 1;
+  google.protobuf.Duration max_battle_duration = 2;
+  AttackCalculationValuesDTO attack_calculation_values = 3;
+  map<string, string> stat_to_formula = 4;
+  string fallback_formula_definition_id = 5;
+  FixedPointDTO splash_damage_exponent = 7;
+  float speed_up_option_feature = 8;
+  float speed_up_option_benefit = 9;
+  bool use_bidirectional_color_factor = 10;
+  repeated HeroUnitStatBaseValueDto base_values = 11;
+  repeated string status_effect_interactions_ids = 12;
+  JoystickBattleConfigDTO joystick_battle_config = 13;
+  int32 temporary_unit_id_base = 14;
+}
+
+message JoystickBattleConfigDTO {
+  float influence_circle_radius = 1;
+  float min_follower_distance = 2;
+  float max_follower_distance = 3;
+  float min_follower_spacing = 4;
+}
+
+message AttackCalculationValuesDTO {
+  FixedPointDTO min_random_attack_factor = 4;
+  FixedPointDTO max_random_attack_factor = 5;
+  FixedPointDTO attack_exponent = 6;
 }

@@ -114,6 +114,13 @@ public class HohHelperResponseDtoToTablePkConverter(
                     tablePartitionKeyProvider.BattleStart(worldId, date), InGameDataProcessingServiceType.Undefined);
                 break;
             }
+            
+            case "game/battle/replay":
+            {
+                yield return (inGameData.CollectionCategoryIds.First(),
+                    tablePartitionKeyProvider.BattleReplay(worldId, date), InGameDataProcessingServiceType.Battle);
+                break;
+            }
 
             case "game/woa/get-player-statistics":
             {

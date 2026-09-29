@@ -25,239 +25,46 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipoZXJvX2JhdHRsZV9jb25zdGFudHNfZGVmaW5pdGlvbl9kdG8ucHJvdG8a",
-            "FWZpeGVkX3BvaW50X2R0by5wcm90byLdAQogSGVyb0JhdHRsZUNvbnN0YW50",
-            "c0RlZmluaXRpb25EVE8STQoPc3RhdF90b19mb3JtdWxhGAQgAygLMjQuSGVy",
-            "b0JhdHRsZUNvbnN0YW50c0RlZmluaXRpb25EVE8uU3RhdFRvRm9ybXVsYUVu",
-            "dHJ5Ei4KC2Jhc2VfdmFsdWVzGAsgAygLMhkuSGVyb1VuaXRTdGF0QmFzZVZh",
-            "bHVlRHRvGjQKElN0YXRUb0Zvcm11bGFFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBSgQIBhAHIkoKGEhlcm9Vbml0U3RhdEJhc2VWYWx1",
-            "ZUR0bxIPCgdzdGF0X2lkGAEgASgJEh0KBXZhbHVlGAIgASgLMg4uRml4ZWRQ",
-            "b2ludERUT0IfqgIcSW5nd2VsYW5kLkZvZy5Jbm4uTW9kZWxzLkhvaGIGcHJv",
-            "dG8z"));
+            "FWZpeGVkX3BvaW50X2R0by5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0",
+            "aW9uLnByb3RvIkoKGEhlcm9Vbml0U3RhdEJhc2VWYWx1ZUR0bxIPCgdzdGF0",
+            "X2lkGAEgASgJEh0KBXZhbHVlGAIgASgLMg4uRml4ZWRQb2ludERUTyKlBQog",
+            "SGVyb0JhdHRsZUNvbnN0YW50c0RlZmluaXRpb25EVE8SCgoCaWQYASABKAkS",
+            "NgoTbWF4X2JhdHRsZV9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbhI+ChlhdHRhY2tfY2FsY3VsYXRpb25fdmFsdWVzGAMgASgL",
+            "MhsuQXR0YWNrQ2FsY3VsYXRpb25WYWx1ZXNEVE8STQoPc3RhdF90b19mb3Jt",
+            "dWxhGAQgAygLMjQuSGVyb0JhdHRsZUNvbnN0YW50c0RlZmluaXRpb25EVE8u",
+            "U3RhdFRvRm9ybXVsYUVudHJ5EiYKHmZhbGxiYWNrX2Zvcm11bGFfZGVmaW5p",
+            "dGlvbl9pZBgFIAEoCRIuChZzcGxhc2hfZGFtYWdlX2V4cG9uZW50GAcgASgL",
+            "Mg4uRml4ZWRQb2ludERUTxIfChdzcGVlZF91cF9vcHRpb25fZmVhdHVyZRgI",
+            "IAEoAhIfChdzcGVlZF91cF9vcHRpb25fYmVuZWZpdBgJIAEoAhImCh51c2Vf",
+            "YmlkaXJlY3Rpb25hbF9jb2xvcl9mYWN0b3IYCiABKAgSLgoLYmFzZV92YWx1",
+            "ZXMYCyADKAsyGS5IZXJvVW5pdFN0YXRCYXNlVmFsdWVEdG8SJgoec3RhdHVz",
+            "X2VmZmVjdF9pbnRlcmFjdGlvbnNfaWRzGAwgAygJEjgKFmpveXN0aWNrX2Jh",
+            "dHRsZV9jb25maWcYDSABKAsyGC5Kb3lzdGlja0JhdHRsZUNvbmZpZ0RUTxIe",
+            "ChZ0ZW1wb3JhcnlfdW5pdF9pZF9iYXNlGA4gASgFGjQKElN0YXRUb0Zvcm11",
+            "bGFFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBSgQIBhAH",
+            "IpYBChdKb3lzdGlja0JhdHRsZUNvbmZpZ0RUTxIfChdpbmZsdWVuY2VfY2ly",
+            "Y2xlX3JhZGl1cxgBIAEoAhIdChVtaW5fZm9sbG93ZXJfZGlzdGFuY2UYAiAB",
+            "KAISHQoVbWF4X2ZvbGxvd2VyX2Rpc3RhbmNlGAMgASgCEhwKFG1pbl9mb2xs",
+            "b3dlcl9zcGFjaW5nGAQgASgCIqkBChpBdHRhY2tDYWxjdWxhdGlvblZhbHVl",
+            "c0RUTxIwChhtaW5fcmFuZG9tX2F0dGFja19mYWN0b3IYBCABKAsyDi5GaXhl",
+            "ZFBvaW50RFRPEjAKGG1heF9yYW5kb21fYXR0YWNrX2ZhY3RvchgFIAEoCzIO",
+            "LkZpeGVkUG9pbnREVE8SJwoPYXR0YWNrX2V4cG9uZW50GAYgASgLMg4uRml4",
+            "ZWRQb2ludERUT0IfqgIcSW5nd2VsYW5kLkZvZy5Jbm4uTW9kZWxzLkhvaGIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDtoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDtoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleConstantsDefinitionDTO), global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleConstantsDefinitionDTO.Parser, new[]{ "StatToFormula", "BaseValues" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto), global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto.Parser, new[]{ "StatId", "Value" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto), global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto.Parser, new[]{ "StatId", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleConstantsDefinitionDTO), global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleConstantsDefinitionDTO.Parser, new[]{ "Id", "MaxBattleDuration", "AttackCalculationValues", "StatToFormula", "FallbackFormulaDefinitionId", "SplashDamageExponent", "SpeedUpOptionFeature", "SpeedUpOptionBenefit", "UseBidirectionalColorFactor", "BaseValues", "StatusEffectInteractionsIds", "JoystickBattleConfig", "TemporaryUnitIdBase" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.JoystickBattleConfigDTO), global::Ingweland.Fog.Inn.Models.Hoh.JoystickBattleConfigDTO.Parser, new[]{ "InfluenceCircleRadius", "MinFollowerDistance", "MaxFollowerDistance", "MinFollowerSpacing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.AttackCalculationValuesDTO), global::Ingweland.Fog.Inn.Models.Hoh.AttackCalculationValuesDTO.Parser, new[]{ "MinRandomAttackFactor", "MaxRandomAttackFactor", "AttackExponent" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class HeroBattleConstantsDefinitionDTO : pb::IMessage<HeroBattleConstantsDefinitionDTO>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<HeroBattleConstantsDefinitionDTO> _parser = new pb::MessageParser<HeroBattleConstantsDefinitionDTO>(() => new HeroBattleConstantsDefinitionDTO());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<HeroBattleConstantsDefinitionDTO> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleConstantsDefinitionDtoReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public HeroBattleConstantsDefinitionDTO() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public HeroBattleConstantsDefinitionDTO(HeroBattleConstantsDefinitionDTO other) : this() {
-      statToFormula_ = other.statToFormula_.Clone();
-      baseValues_ = other.baseValues_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public HeroBattleConstantsDefinitionDTO Clone() {
-      return new HeroBattleConstantsDefinitionDTO(this);
-    }
-
-    /// <summary>Field number for the "stat_to_formula" field.</summary>
-    public const int StatToFormulaFieldNumber = 4;
-    private static readonly pbc::MapField<string, string>.Codec _map_statToFormula_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
-    private readonly pbc::MapField<string, string> statToFormula_ = new pbc::MapField<string, string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> StatToFormula {
-      get { return statToFormula_; }
-    }
-
-    /// <summary>Field number for the "base_values" field.</summary>
-    public const int BaseValuesFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto> _repeated_baseValues_codec
-        = pb::FieldCodec.ForMessage(90, global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto.Parser);
-    private readonly pbc::RepeatedField<global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto> baseValues_ = new pbc::RepeatedField<global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto> BaseValues {
-      get { return baseValues_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as HeroBattleConstantsDefinitionDTO);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(HeroBattleConstantsDefinitionDTO other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!StatToFormula.Equals(other.StatToFormula)) return false;
-      if(!baseValues_.Equals(other.baseValues_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= StatToFormula.GetHashCode();
-      hash ^= baseValues_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      statToFormula_.WriteTo(output, _map_statToFormula_codec);
-      baseValues_.WriteTo(output, _repeated_baseValues_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      statToFormula_.WriteTo(ref output, _map_statToFormula_codec);
-      baseValues_.WriteTo(ref output, _repeated_baseValues_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += statToFormula_.CalculateSize(_map_statToFormula_codec);
-      size += baseValues_.CalculateSize(_repeated_baseValues_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(HeroBattleConstantsDefinitionDTO other) {
-      if (other == null) {
-        return;
-      }
-      statToFormula_.MergeFrom(other.statToFormula_);
-      baseValues_.Add(other.baseValues_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 34: {
-            statToFormula_.AddEntriesFrom(input, _map_statToFormula_codec);
-            break;
-          }
-          case 90: {
-            baseValues_.AddEntriesFrom(input, _repeated_baseValues_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 34: {
-            statToFormula_.AddEntriesFrom(ref input, _map_statToFormula_codec);
-            break;
-          }
-          case 90: {
-            baseValues_.AddEntriesFrom(ref input, _repeated_baseValues_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HeroUnitStatBaseValueDto : pb::IMessage<HeroUnitStatBaseValueDto>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -273,7 +80,7 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleConstantsDefinitionDtoReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleConstantsDefinitionDtoReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -493,6 +300,1259 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
               Value = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
             }
             input.ReadMessage(Value);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class HeroBattleConstantsDefinitionDTO : pb::IMessage<HeroBattleConstantsDefinitionDTO>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<HeroBattleConstantsDefinitionDTO> _parser = new pb::MessageParser<HeroBattleConstantsDefinitionDTO>(() => new HeroBattleConstantsDefinitionDTO());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<HeroBattleConstantsDefinitionDTO> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleConstantsDefinitionDtoReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HeroBattleConstantsDefinitionDTO() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HeroBattleConstantsDefinitionDTO(HeroBattleConstantsDefinitionDTO other) : this() {
+      id_ = other.id_;
+      maxBattleDuration_ = other.maxBattleDuration_ != null ? other.maxBattleDuration_.Clone() : null;
+      attackCalculationValues_ = other.attackCalculationValues_ != null ? other.attackCalculationValues_.Clone() : null;
+      statToFormula_ = other.statToFormula_.Clone();
+      fallbackFormulaDefinitionId_ = other.fallbackFormulaDefinitionId_;
+      splashDamageExponent_ = other.splashDamageExponent_ != null ? other.splashDamageExponent_.Clone() : null;
+      speedUpOptionFeature_ = other.speedUpOptionFeature_;
+      speedUpOptionBenefit_ = other.speedUpOptionBenefit_;
+      useBidirectionalColorFactor_ = other.useBidirectionalColorFactor_;
+      baseValues_ = other.baseValues_.Clone();
+      statusEffectInteractionsIds_ = other.statusEffectInteractionsIds_.Clone();
+      joystickBattleConfig_ = other.joystickBattleConfig_ != null ? other.joystickBattleConfig_.Clone() : null;
+      temporaryUnitIdBase_ = other.temporaryUnitIdBase_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HeroBattleConstantsDefinitionDTO Clone() {
+      return new HeroBattleConstantsDefinitionDTO(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "max_battle_duration" field.</summary>
+    public const int MaxBattleDurationFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Duration maxBattleDuration_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration MaxBattleDuration {
+      get { return maxBattleDuration_; }
+      set {
+        maxBattleDuration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "attack_calculation_values" field.</summary>
+    public const int AttackCalculationValuesFieldNumber = 3;
+    private global::Ingweland.Fog.Inn.Models.Hoh.AttackCalculationValuesDTO attackCalculationValues_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.AttackCalculationValuesDTO AttackCalculationValues {
+      get { return attackCalculationValues_; }
+      set {
+        attackCalculationValues_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stat_to_formula" field.</summary>
+    public const int StatToFormulaFieldNumber = 4;
+    private static readonly pbc::MapField<string, string>.Codec _map_statToFormula_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
+    private readonly pbc::MapField<string, string> statToFormula_ = new pbc::MapField<string, string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> StatToFormula {
+      get { return statToFormula_; }
+    }
+
+    /// <summary>Field number for the "fallback_formula_definition_id" field.</summary>
+    public const int FallbackFormulaDefinitionIdFieldNumber = 5;
+    private string fallbackFormulaDefinitionId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FallbackFormulaDefinitionId {
+      get { return fallbackFormulaDefinitionId_; }
+      set {
+        fallbackFormulaDefinitionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "splash_damage_exponent" field.</summary>
+    public const int SplashDamageExponentFieldNumber = 7;
+    private global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO splashDamageExponent_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO SplashDamageExponent {
+      get { return splashDamageExponent_; }
+      set {
+        splashDamageExponent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "speed_up_option_feature" field.</summary>
+    public const int SpeedUpOptionFeatureFieldNumber = 8;
+    private float speedUpOptionFeature_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float SpeedUpOptionFeature {
+      get { return speedUpOptionFeature_; }
+      set {
+        speedUpOptionFeature_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "speed_up_option_benefit" field.</summary>
+    public const int SpeedUpOptionBenefitFieldNumber = 9;
+    private float speedUpOptionBenefit_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float SpeedUpOptionBenefit {
+      get { return speedUpOptionBenefit_; }
+      set {
+        speedUpOptionBenefit_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "use_bidirectional_color_factor" field.</summary>
+    public const int UseBidirectionalColorFactorFieldNumber = 10;
+    private bool useBidirectionalColorFactor_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseBidirectionalColorFactor {
+      get { return useBidirectionalColorFactor_; }
+      set {
+        useBidirectionalColorFactor_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "base_values" field.</summary>
+    public const int BaseValuesFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto> _repeated_baseValues_codec
+        = pb::FieldCodec.ForMessage(90, global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto.Parser);
+    private readonly pbc::RepeatedField<global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto> baseValues_ = new pbc::RepeatedField<global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatBaseValueDto> BaseValues {
+      get { return baseValues_; }
+    }
+
+    /// <summary>Field number for the "status_effect_interactions_ids" field.</summary>
+    public const int StatusEffectInteractionsIdsFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _repeated_statusEffectInteractionsIds_codec
+        = pb::FieldCodec.ForString(98);
+    private readonly pbc::RepeatedField<string> statusEffectInteractionsIds_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> StatusEffectInteractionsIds {
+      get { return statusEffectInteractionsIds_; }
+    }
+
+    /// <summary>Field number for the "joystick_battle_config" field.</summary>
+    public const int JoystickBattleConfigFieldNumber = 13;
+    private global::Ingweland.Fog.Inn.Models.Hoh.JoystickBattleConfigDTO joystickBattleConfig_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.JoystickBattleConfigDTO JoystickBattleConfig {
+      get { return joystickBattleConfig_; }
+      set {
+        joystickBattleConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "temporary_unit_id_base" field.</summary>
+    public const int TemporaryUnitIdBaseFieldNumber = 14;
+    private int temporaryUnitIdBase_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TemporaryUnitIdBase {
+      get { return temporaryUnitIdBase_; }
+      set {
+        temporaryUnitIdBase_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as HeroBattleConstantsDefinitionDTO);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(HeroBattleConstantsDefinitionDTO other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (!object.Equals(MaxBattleDuration, other.MaxBattleDuration)) return false;
+      if (!object.Equals(AttackCalculationValues, other.AttackCalculationValues)) return false;
+      if (!StatToFormula.Equals(other.StatToFormula)) return false;
+      if (FallbackFormulaDefinitionId != other.FallbackFormulaDefinitionId) return false;
+      if (!object.Equals(SplashDamageExponent, other.SplashDamageExponent)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SpeedUpOptionFeature, other.SpeedUpOptionFeature)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SpeedUpOptionBenefit, other.SpeedUpOptionBenefit)) return false;
+      if (UseBidirectionalColorFactor != other.UseBidirectionalColorFactor) return false;
+      if(!baseValues_.Equals(other.baseValues_)) return false;
+      if(!statusEffectInteractionsIds_.Equals(other.statusEffectInteractionsIds_)) return false;
+      if (!object.Equals(JoystickBattleConfig, other.JoystickBattleConfig)) return false;
+      if (TemporaryUnitIdBase != other.TemporaryUnitIdBase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (maxBattleDuration_ != null) hash ^= MaxBattleDuration.GetHashCode();
+      if (attackCalculationValues_ != null) hash ^= AttackCalculationValues.GetHashCode();
+      hash ^= StatToFormula.GetHashCode();
+      if (FallbackFormulaDefinitionId.Length != 0) hash ^= FallbackFormulaDefinitionId.GetHashCode();
+      if (splashDamageExponent_ != null) hash ^= SplashDamageExponent.GetHashCode();
+      if (SpeedUpOptionFeature != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SpeedUpOptionFeature);
+      if (SpeedUpOptionBenefit != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SpeedUpOptionBenefit);
+      if (UseBidirectionalColorFactor != false) hash ^= UseBidirectionalColorFactor.GetHashCode();
+      hash ^= baseValues_.GetHashCode();
+      hash ^= statusEffectInteractionsIds_.GetHashCode();
+      if (joystickBattleConfig_ != null) hash ^= JoystickBattleConfig.GetHashCode();
+      if (TemporaryUnitIdBase != 0) hash ^= TemporaryUnitIdBase.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (maxBattleDuration_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MaxBattleDuration);
+      }
+      if (attackCalculationValues_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AttackCalculationValues);
+      }
+      statToFormula_.WriteTo(output, _map_statToFormula_codec);
+      if (FallbackFormulaDefinitionId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(FallbackFormulaDefinitionId);
+      }
+      if (splashDamageExponent_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(SplashDamageExponent);
+      }
+      if (SpeedUpOptionFeature != 0F) {
+        output.WriteRawTag(69);
+        output.WriteFloat(SpeedUpOptionFeature);
+      }
+      if (SpeedUpOptionBenefit != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(SpeedUpOptionBenefit);
+      }
+      if (UseBidirectionalColorFactor != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(UseBidirectionalColorFactor);
+      }
+      baseValues_.WriteTo(output, _repeated_baseValues_codec);
+      statusEffectInteractionsIds_.WriteTo(output, _repeated_statusEffectInteractionsIds_codec);
+      if (joystickBattleConfig_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(JoystickBattleConfig);
+      }
+      if (TemporaryUnitIdBase != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(TemporaryUnitIdBase);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (maxBattleDuration_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MaxBattleDuration);
+      }
+      if (attackCalculationValues_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AttackCalculationValues);
+      }
+      statToFormula_.WriteTo(ref output, _map_statToFormula_codec);
+      if (FallbackFormulaDefinitionId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(FallbackFormulaDefinitionId);
+      }
+      if (splashDamageExponent_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(SplashDamageExponent);
+      }
+      if (SpeedUpOptionFeature != 0F) {
+        output.WriteRawTag(69);
+        output.WriteFloat(SpeedUpOptionFeature);
+      }
+      if (SpeedUpOptionBenefit != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(SpeedUpOptionBenefit);
+      }
+      if (UseBidirectionalColorFactor != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(UseBidirectionalColorFactor);
+      }
+      baseValues_.WriteTo(ref output, _repeated_baseValues_codec);
+      statusEffectInteractionsIds_.WriteTo(ref output, _repeated_statusEffectInteractionsIds_codec);
+      if (joystickBattleConfig_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(JoystickBattleConfig);
+      }
+      if (TemporaryUnitIdBase != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(TemporaryUnitIdBase);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (maxBattleDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MaxBattleDuration);
+      }
+      if (attackCalculationValues_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AttackCalculationValues);
+      }
+      size += statToFormula_.CalculateSize(_map_statToFormula_codec);
+      if (FallbackFormulaDefinitionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FallbackFormulaDefinitionId);
+      }
+      if (splashDamageExponent_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SplashDamageExponent);
+      }
+      if (SpeedUpOptionFeature != 0F) {
+        size += 1 + 4;
+      }
+      if (SpeedUpOptionBenefit != 0F) {
+        size += 1 + 4;
+      }
+      if (UseBidirectionalColorFactor != false) {
+        size += 1 + 1;
+      }
+      size += baseValues_.CalculateSize(_repeated_baseValues_codec);
+      size += statusEffectInteractionsIds_.CalculateSize(_repeated_statusEffectInteractionsIds_codec);
+      if (joystickBattleConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(JoystickBattleConfig);
+      }
+      if (TemporaryUnitIdBase != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TemporaryUnitIdBase);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(HeroBattleConstantsDefinitionDTO other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.maxBattleDuration_ != null) {
+        if (maxBattleDuration_ == null) {
+          MaxBattleDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        MaxBattleDuration.MergeFrom(other.MaxBattleDuration);
+      }
+      if (other.attackCalculationValues_ != null) {
+        if (attackCalculationValues_ == null) {
+          AttackCalculationValues = new global::Ingweland.Fog.Inn.Models.Hoh.AttackCalculationValuesDTO();
+        }
+        AttackCalculationValues.MergeFrom(other.AttackCalculationValues);
+      }
+      statToFormula_.MergeFrom(other.statToFormula_);
+      if (other.FallbackFormulaDefinitionId.Length != 0) {
+        FallbackFormulaDefinitionId = other.FallbackFormulaDefinitionId;
+      }
+      if (other.splashDamageExponent_ != null) {
+        if (splashDamageExponent_ == null) {
+          SplashDamageExponent = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+        }
+        SplashDamageExponent.MergeFrom(other.SplashDamageExponent);
+      }
+      if (other.SpeedUpOptionFeature != 0F) {
+        SpeedUpOptionFeature = other.SpeedUpOptionFeature;
+      }
+      if (other.SpeedUpOptionBenefit != 0F) {
+        SpeedUpOptionBenefit = other.SpeedUpOptionBenefit;
+      }
+      if (other.UseBidirectionalColorFactor != false) {
+        UseBidirectionalColorFactor = other.UseBidirectionalColorFactor;
+      }
+      baseValues_.Add(other.baseValues_);
+      statusEffectInteractionsIds_.Add(other.statusEffectInteractionsIds_);
+      if (other.joystickBattleConfig_ != null) {
+        if (joystickBattleConfig_ == null) {
+          JoystickBattleConfig = new global::Ingweland.Fog.Inn.Models.Hoh.JoystickBattleConfigDTO();
+        }
+        JoystickBattleConfig.MergeFrom(other.JoystickBattleConfig);
+      }
+      if (other.TemporaryUnitIdBase != 0) {
+        TemporaryUnitIdBase = other.TemporaryUnitIdBase;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (maxBattleDuration_ == null) {
+              MaxBattleDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MaxBattleDuration);
+            break;
+          }
+          case 26: {
+            if (attackCalculationValues_ == null) {
+              AttackCalculationValues = new global::Ingweland.Fog.Inn.Models.Hoh.AttackCalculationValuesDTO();
+            }
+            input.ReadMessage(AttackCalculationValues);
+            break;
+          }
+          case 34: {
+            statToFormula_.AddEntriesFrom(input, _map_statToFormula_codec);
+            break;
+          }
+          case 42: {
+            FallbackFormulaDefinitionId = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (splashDamageExponent_ == null) {
+              SplashDamageExponent = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(SplashDamageExponent);
+            break;
+          }
+          case 69: {
+            SpeedUpOptionFeature = input.ReadFloat();
+            break;
+          }
+          case 77: {
+            SpeedUpOptionBenefit = input.ReadFloat();
+            break;
+          }
+          case 80: {
+            UseBidirectionalColorFactor = input.ReadBool();
+            break;
+          }
+          case 90: {
+            baseValues_.AddEntriesFrom(input, _repeated_baseValues_codec);
+            break;
+          }
+          case 98: {
+            statusEffectInteractionsIds_.AddEntriesFrom(input, _repeated_statusEffectInteractionsIds_codec);
+            break;
+          }
+          case 106: {
+            if (joystickBattleConfig_ == null) {
+              JoystickBattleConfig = new global::Ingweland.Fog.Inn.Models.Hoh.JoystickBattleConfigDTO();
+            }
+            input.ReadMessage(JoystickBattleConfig);
+            break;
+          }
+          case 112: {
+            TemporaryUnitIdBase = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (maxBattleDuration_ == null) {
+              MaxBattleDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MaxBattleDuration);
+            break;
+          }
+          case 26: {
+            if (attackCalculationValues_ == null) {
+              AttackCalculationValues = new global::Ingweland.Fog.Inn.Models.Hoh.AttackCalculationValuesDTO();
+            }
+            input.ReadMessage(AttackCalculationValues);
+            break;
+          }
+          case 34: {
+            statToFormula_.AddEntriesFrom(ref input, _map_statToFormula_codec);
+            break;
+          }
+          case 42: {
+            FallbackFormulaDefinitionId = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (splashDamageExponent_ == null) {
+              SplashDamageExponent = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(SplashDamageExponent);
+            break;
+          }
+          case 69: {
+            SpeedUpOptionFeature = input.ReadFloat();
+            break;
+          }
+          case 77: {
+            SpeedUpOptionBenefit = input.ReadFloat();
+            break;
+          }
+          case 80: {
+            UseBidirectionalColorFactor = input.ReadBool();
+            break;
+          }
+          case 90: {
+            baseValues_.AddEntriesFrom(ref input, _repeated_baseValues_codec);
+            break;
+          }
+          case 98: {
+            statusEffectInteractionsIds_.AddEntriesFrom(ref input, _repeated_statusEffectInteractionsIds_codec);
+            break;
+          }
+          case 106: {
+            if (joystickBattleConfig_ == null) {
+              JoystickBattleConfig = new global::Ingweland.Fog.Inn.Models.Hoh.JoystickBattleConfigDTO();
+            }
+            input.ReadMessage(JoystickBattleConfig);
+            break;
+          }
+          case 112: {
+            TemporaryUnitIdBase = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class JoystickBattleConfigDTO : pb::IMessage<JoystickBattleConfigDTO>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<JoystickBattleConfigDTO> _parser = new pb::MessageParser<JoystickBattleConfigDTO>(() => new JoystickBattleConfigDTO());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<JoystickBattleConfigDTO> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleConstantsDefinitionDtoReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public JoystickBattleConfigDTO() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public JoystickBattleConfigDTO(JoystickBattleConfigDTO other) : this() {
+      influenceCircleRadius_ = other.influenceCircleRadius_;
+      minFollowerDistance_ = other.minFollowerDistance_;
+      maxFollowerDistance_ = other.maxFollowerDistance_;
+      minFollowerSpacing_ = other.minFollowerSpacing_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public JoystickBattleConfigDTO Clone() {
+      return new JoystickBattleConfigDTO(this);
+    }
+
+    /// <summary>Field number for the "influence_circle_radius" field.</summary>
+    public const int InfluenceCircleRadiusFieldNumber = 1;
+    private float influenceCircleRadius_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float InfluenceCircleRadius {
+      get { return influenceCircleRadius_; }
+      set {
+        influenceCircleRadius_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "min_follower_distance" field.</summary>
+    public const int MinFollowerDistanceFieldNumber = 2;
+    private float minFollowerDistance_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float MinFollowerDistance {
+      get { return minFollowerDistance_; }
+      set {
+        minFollowerDistance_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_follower_distance" field.</summary>
+    public const int MaxFollowerDistanceFieldNumber = 3;
+    private float maxFollowerDistance_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float MaxFollowerDistance {
+      get { return maxFollowerDistance_; }
+      set {
+        maxFollowerDistance_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "min_follower_spacing" field.</summary>
+    public const int MinFollowerSpacingFieldNumber = 4;
+    private float minFollowerSpacing_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float MinFollowerSpacing {
+      get { return minFollowerSpacing_; }
+      set {
+        minFollowerSpacing_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as JoystickBattleConfigDTO);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(JoystickBattleConfigDTO other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(InfluenceCircleRadius, other.InfluenceCircleRadius)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MinFollowerDistance, other.MinFollowerDistance)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MaxFollowerDistance, other.MaxFollowerDistance)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MinFollowerSpacing, other.MinFollowerSpacing)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (InfluenceCircleRadius != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(InfluenceCircleRadius);
+      if (MinFollowerDistance != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MinFollowerDistance);
+      if (MaxFollowerDistance != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MaxFollowerDistance);
+      if (MinFollowerSpacing != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MinFollowerSpacing);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (InfluenceCircleRadius != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(InfluenceCircleRadius);
+      }
+      if (MinFollowerDistance != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(MinFollowerDistance);
+      }
+      if (MaxFollowerDistance != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(MaxFollowerDistance);
+      }
+      if (MinFollowerSpacing != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(MinFollowerSpacing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (InfluenceCircleRadius != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(InfluenceCircleRadius);
+      }
+      if (MinFollowerDistance != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(MinFollowerDistance);
+      }
+      if (MaxFollowerDistance != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(MaxFollowerDistance);
+      }
+      if (MinFollowerSpacing != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(MinFollowerSpacing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (InfluenceCircleRadius != 0F) {
+        size += 1 + 4;
+      }
+      if (MinFollowerDistance != 0F) {
+        size += 1 + 4;
+      }
+      if (MaxFollowerDistance != 0F) {
+        size += 1 + 4;
+      }
+      if (MinFollowerSpacing != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(JoystickBattleConfigDTO other) {
+      if (other == null) {
+        return;
+      }
+      if (other.InfluenceCircleRadius != 0F) {
+        InfluenceCircleRadius = other.InfluenceCircleRadius;
+      }
+      if (other.MinFollowerDistance != 0F) {
+        MinFollowerDistance = other.MinFollowerDistance;
+      }
+      if (other.MaxFollowerDistance != 0F) {
+        MaxFollowerDistance = other.MaxFollowerDistance;
+      }
+      if (other.MinFollowerSpacing != 0F) {
+        MinFollowerSpacing = other.MinFollowerSpacing;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            InfluenceCircleRadius = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            MinFollowerDistance = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            MaxFollowerDistance = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            MinFollowerSpacing = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            InfluenceCircleRadius = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            MinFollowerDistance = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            MaxFollowerDistance = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            MinFollowerSpacing = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AttackCalculationValuesDTO : pb::IMessage<AttackCalculationValuesDTO>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AttackCalculationValuesDTO> _parser = new pb::MessageParser<AttackCalculationValuesDTO>(() => new AttackCalculationValuesDTO());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AttackCalculationValuesDTO> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleConstantsDefinitionDtoReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttackCalculationValuesDTO() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttackCalculationValuesDTO(AttackCalculationValuesDTO other) : this() {
+      minRandomAttackFactor_ = other.minRandomAttackFactor_ != null ? other.minRandomAttackFactor_.Clone() : null;
+      maxRandomAttackFactor_ = other.maxRandomAttackFactor_ != null ? other.maxRandomAttackFactor_.Clone() : null;
+      attackExponent_ = other.attackExponent_ != null ? other.attackExponent_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttackCalculationValuesDTO Clone() {
+      return new AttackCalculationValuesDTO(this);
+    }
+
+    /// <summary>Field number for the "min_random_attack_factor" field.</summary>
+    public const int MinRandomAttackFactorFieldNumber = 4;
+    private global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO minRandomAttackFactor_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO MinRandomAttackFactor {
+      get { return minRandomAttackFactor_; }
+      set {
+        minRandomAttackFactor_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_random_attack_factor" field.</summary>
+    public const int MaxRandomAttackFactorFieldNumber = 5;
+    private global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO maxRandomAttackFactor_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO MaxRandomAttackFactor {
+      get { return maxRandomAttackFactor_; }
+      set {
+        maxRandomAttackFactor_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "attack_exponent" field.</summary>
+    public const int AttackExponentFieldNumber = 6;
+    private global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO attackExponent_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO AttackExponent {
+      get { return attackExponent_; }
+      set {
+        attackExponent_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AttackCalculationValuesDTO);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AttackCalculationValuesDTO other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(MinRandomAttackFactor, other.MinRandomAttackFactor)) return false;
+      if (!object.Equals(MaxRandomAttackFactor, other.MaxRandomAttackFactor)) return false;
+      if (!object.Equals(AttackExponent, other.AttackExponent)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (minRandomAttackFactor_ != null) hash ^= MinRandomAttackFactor.GetHashCode();
+      if (maxRandomAttackFactor_ != null) hash ^= MaxRandomAttackFactor.GetHashCode();
+      if (attackExponent_ != null) hash ^= AttackExponent.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (minRandomAttackFactor_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(MinRandomAttackFactor);
+      }
+      if (maxRandomAttackFactor_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(MaxRandomAttackFactor);
+      }
+      if (attackExponent_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AttackExponent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (minRandomAttackFactor_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(MinRandomAttackFactor);
+      }
+      if (maxRandomAttackFactor_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(MaxRandomAttackFactor);
+      }
+      if (attackExponent_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AttackExponent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (minRandomAttackFactor_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MinRandomAttackFactor);
+      }
+      if (maxRandomAttackFactor_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MaxRandomAttackFactor);
+      }
+      if (attackExponent_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AttackExponent);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AttackCalculationValuesDTO other) {
+      if (other == null) {
+        return;
+      }
+      if (other.minRandomAttackFactor_ != null) {
+        if (minRandomAttackFactor_ == null) {
+          MinRandomAttackFactor = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+        }
+        MinRandomAttackFactor.MergeFrom(other.MinRandomAttackFactor);
+      }
+      if (other.maxRandomAttackFactor_ != null) {
+        if (maxRandomAttackFactor_ == null) {
+          MaxRandomAttackFactor = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+        }
+        MaxRandomAttackFactor.MergeFrom(other.MaxRandomAttackFactor);
+      }
+      if (other.attackExponent_ != null) {
+        if (attackExponent_ == null) {
+          AttackExponent = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+        }
+        AttackExponent.MergeFrom(other.AttackExponent);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 34: {
+            if (minRandomAttackFactor_ == null) {
+              MinRandomAttackFactor = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(MinRandomAttackFactor);
+            break;
+          }
+          case 42: {
+            if (maxRandomAttackFactor_ == null) {
+              MaxRandomAttackFactor = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(MaxRandomAttackFactor);
+            break;
+          }
+          case 50: {
+            if (attackExponent_ == null) {
+              AttackExponent = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(AttackExponent);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 34: {
+            if (minRandomAttackFactor_ == null) {
+              MinRandomAttackFactor = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(MinRandomAttackFactor);
+            break;
+          }
+          case 42: {
+            if (maxRandomAttackFactor_ == null) {
+              MaxRandomAttackFactor = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(MaxRandomAttackFactor);
+            break;
+          }
+          case 50: {
+            if (attackExponent_ == null) {
+              AttackExponent = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(AttackExponent);
             break;
           }
         }

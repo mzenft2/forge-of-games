@@ -1,0 +1,175 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+import "google/protobuf/duration.proto";
+import "fixed_point_dto.proto";
+import "hero_battle_stats_response.proto";
+import "hero_unit_stat_definition_dto.proto";
+import "hero_unit_color_definition_dto.proto";
+import "battle_ability_definition_dto.proto";
+import "hero_finish_wave_request_dto.proto";
+import "hero_battle_constants_definition_dto.proto";
+import "battle_summary_dto.proto";
+
+option csharp_namespace = "Ingweland.Fog.Inn.Models.Hoh";
+
+message RecordedBattleDTO {
+  BattleConfigDTO config = 1;
+  repeated RecordedBattleAction actions = 2;
+  repeated string debug_events = 4;
+}
+
+message BattleConfigDTO {
+  message VfxHitTime {
+    string vfx_type = 1;
+    FixedPointDTO hit_time = 3;
+  }
+  message Constants {
+    AttackCalculationValuesDTO attack_calculation_values = 1;
+    bool use_bidirectional_color_factor = 2;
+    int32 temporary_unit_id_base = 3;
+    FixedPointDTO splash_damage_exponent = 5;
+  }
+  message SquadSpawnData {
+    int32 spawn_point_id = 1;
+    UnitSpawnDataDTO hero = 2;
+    UnitSpawnDataDTO support = 3;
+  }
+  message WaveConfig {
+    repeated SpawnSquadEffectDTO.SquadSpawnData enemy_squads = 1;
+  }
+  uint32 random_seed = 1;
+  google.protobuf.Duration duration = 2;
+  repeated google.protobuf.Any win_conditions = 3;
+  repeated google.protobuf.Any lose_conditions = 4;
+  repeated BattleConfigDTO.SquadSpawnData player_squads = 5;
+  repeated BattleConfigDTO.WaveConfig waves = 6;
+  bool pause_for_enemy_abilities = 7;
+  bool wait_for_active_abilities_on_battle_end = 8;
+  bool allow_player_input = 9;
+  BattleConfigDTO.Constants constants = 11;
+  repeated HeroUnitStatConfigDefinitionDTO unit_stat_config_definitions = 12;
+  repeated BattleEffectModifierTypeDTO effect_modifier_types = 14;
+  repeated BattlefieldLaneDefinitionDTO lanes = 15;
+  repeated int32 disabled_player_slots = 16;
+  repeated HeroUnitStatDefinitionDTO unit_stat_definitions = 20;
+  repeated PowerLevelPenaltyAdjusterDTO power_level_penalty_adjusters = 21;
+  repeated HeroUnitColorDefinitionDTO unit_colors = 23;
+  repeated BattleConfigDTO.VfxHitTime vfx_hit_times = 24;
+  repeated BattleAbilityDefinitionDTO extra_abilities = 26;
+  google.protobuf.Any result_calculation = 27;
+  bool respect_battlefield_bounds_for_abilities = 28;
+}
+
+message BattleValidationRequestDTO {
+  RecordedBattleDTO recorded_battle = 1;
+}
+
+message BattleValidationResponseDTO {
+  BattleResultDTO result = 1;
+}
+
+message BattleResultDTO {
+  bool is_win = 1;
+  HeroBattleLostReason lose_reason = 2;
+  int32 win_stars = 3;
+  repeated BattleResultUnitStats player_unit_stats = 4;
+  repeated BattleResultUnitStats enemy_unit_stats = 5;
+  repeated BattleSquadStatsDto attacker_squads = 6;
+  repeated BattleSquadStatsDto target_squads = 7;
+  FixedPointDTO battle_duration = 8;
+}
+
+message BattleResultUnitStats {
+  string definition_id = 1;
+  int32 origin_unit_id = 2;
+  map<string, FixedPointDTO> tracked_stats = 3;
+  int32 battle_unit_id = 4;
+  int32 battlefield_slot = 5;
+  int32 wave = 6;
+  bool is_hero = 7;
+}
+
+message UnitSpawnDataDTO {
+  message AbilityCreateInfo {
+    BattleAbilityDefinitionDTO definition = 1;
+    bool is_relic_ability = 2;
+  }
+  string definition_id = 1;
+  string color_definition_id = 2;
+  string type_definition_id = 3;
+  repeated UnitSpawnDataDTO.AbilityCreateInfo abilities = 7;
+  bool repeat_last_ability = 8;
+  int32 units_per_row = 9;
+  string hero_class_definition_id = 10;
+  FixedPointDTO power = 11;
+  map<string, FixedPointDTO> stat_values = 12;
+  map<string, FixedPointDTO> normalized_stat_restore_values = 13;
+  int32 level = 14;
+}
+
+message SpawnSquadEffectDTO {
+  message SquadSpawnData {
+    UnitSpawnDataDTO hero = 1;
+    UnitSpawnDataDTO support_unit = 2;
+  }
+}
+
+message HeroUnitStatConfigDefinitionDTO {
+  enum UnitStatFormattingType {
+    NUMERIC = 0;
+    PERCENTAGE = 1;
+    CUSTOM = 2;
+  }
+  string definition_id = 1;
+  string unit_stat = 2;
+  string battle_start_unit_stat = 3;
+  string max_unit_stat = 4;
+  double min = 5;
+  string regen_unit_stat = 6;
+  UnitStatFormattingType formatting_type = 7;
+}
+
+message BattleEffectModifierTypeDTO {
+  string id = 1;
+  repeated string taken_stats = 2;
+  repeated string given_stats = 3;
+}
+
+message BattlefieldSpawnPointDTO {
+  int32 id = 1;
+  int32 x = 2;
+  int32 y = 3;
+  bool is_outside_of_battlefield = 4;
+  int32 attack_priority = 5;
+}
+
+message BattlefieldSlotDTO {
+  int32 id = 1;
+  int32 x = 2;
+  int32 y = 3;
+  int32 order = 6;
+  repeated string allowed_hero_class_ids = 7;
+}
+
+message BattlefieldLocationPointDTO {
+  int32 x = 1;
+  int32 y = 2;
+}
+
+message BattlefieldLaneDefinitionDTO {
+  string definition_id = 1;
+  int32 lane_index = 2;
+  repeated BattlefieldSpawnPointDTO enemy_spawn_points = 3;
+  repeated BattlefieldLocationPointDTO location_points = 4;
+  repeated BattlefieldSlotDTO player_hero_slots = 5;
+  repeated BattlefieldSpawnPointDTO player_unit_spawn_points = 6;
+}
+
+message PowerLevelPenaltyAdjusterDTO {
+  string id = 1;
+  FixedPointDTO accepted_diff_percentage = 6;
+  FixedPointDTO accepted_diff_flat = 7;
+  FixedPointDTO penalty = 8;
+  FixedPointDTO min_cap_percentage = 9;
+}

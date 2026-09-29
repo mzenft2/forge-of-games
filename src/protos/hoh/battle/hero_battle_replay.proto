@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+import "alliance_banner.proto";
+import "hero_battle_config.proto";
+import "google/protobuf/wrappers.proto";
+import "hero_finish_wave_request_dto.proto";
+
+option csharp_namespace = "Ingweland.Fog.Inn.Models.Hoh";
+
+message BattleReplayRequest {
+  google.protobuf.BytesValue battle_id = 1;
+}
+
+message BattleReplayDTO {
+  uint32 format_version = 1;
+  string client_version = 2;
+  BattleConfigDTO config = 3;
+  repeated BattleReplayWaveDTO waves = 4;
+  string battlefield_asset_set_definition_id = 5;
+  string battlefield_preset_definition_id = 6;
+  BattleResultDTO result = 7;
+  BattleParticipantSnapshotDTO attacker_snapshot = 10;
+  BattleParticipantSnapshotDTO defender_snapshot = 11;
+}
+
+message BattleParticipantSnapshotDTO {
+  int64 player_id = 1;
+  string name = 2;
+  int32 portrait_id = 3;
+  int64 alliance_id = 4;
+  string alliance_name = 5;
+  AllianceBannerDTO alliance_banner = 6;
+  int64 battle_power = 7;
+}
+
+message BattleParticipantSnapshotsDTO {
+  BattleParticipantSnapshotDTO attacker = 1;
+  BattleParticipantSnapshotDTO defender = 2;
+}
+
+message BattleReplaySimResultDTO {
+  repeated BattleReplayWaveDTO waves = 1;
+  BattleResultDTO result = 2;
+}
+
+message BattleReplayWaveDTO {
+  int32 wave_index = 1;
+  WaveTimelineDto event_log = 2; // HeroBattleLogDTO in original data
+  repeated BattleReplayKeyframeDTO keyframes = 3;
+  repeated BattleReplayCastTrackDTO cast_tracks = 4;
+}
+
+message BattleReplayKeyframeDTO {
+  int64 millis_since_wave_start = 1;
+  repeated BattleReplayUnitStateDTO units = 2;
+}
+
+message BattleReplayUnitStateDTO {
+  int32 unit_id_in_battle = 1;
+  float x = 2;
+  float y = 3;
+  float rotation = 4;
+}
+
+message BattleReplayCastTrackDTO {
+  int32 cast_id = 1;
+  string asset_id = 2;
+  int64 start_millis = 3;
+  int64 end_millis = 4;
+  repeated BattleReplayCastSampleDTO samples = 5;
+}
+
+message BattleReplayCastSampleDTO {
+  int64 millis_since_wave_start = 1;
+  float x = 2;
+  float y = 3;
+}

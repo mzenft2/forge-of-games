@@ -24,14 +24,18 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
     static HeroUnitStatDefinitionDtoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNoZXJvX3VuaXRfc3RhdF9kZWZpbml0aW9uX2R0by5wcm90byJLChlIZXJv",
-            "VW5pdFN0YXREZWZpbml0aW9uRFRPEgoKAmlkGAEgASgJEgoKAnUyGAIgASgF",
-            "EgoKAnUzGAMgASgFEgoKAnU0GAQgASgFQh+qAhxJbmd3ZWxhbmQuRm9nLklu",
-            "bi5Nb2RlbHMuSG9oYgZwcm90bzM="));
+            "CiNoZXJvX3VuaXRfc3RhdF9kZWZpbml0aW9uX2R0by5wcm90byKAAgoZSGVy",
+            "b1VuaXRTdGF0RGVmaW5pdGlvbkRUTxIKCgJpZBgBIAEoCRIOCgZoaWRkZW4Y",
+            "AiABKAgSHQoVdHJhY2tlZF9iZXR3ZWVuX3dhdmVzGAMgASgIEg0KBW9yZGVy",
+            "GAQgASgFEg0KBWdyb3VwGAUgASgJEj0KCnZpc2liaWxpdHkYBiABKA4yKS5I",
+            "ZXJvVW5pdFN0YXREZWZpbml0aW9uRFRPLlN0YXRWaXNpYmlsaXR5IksKDlN0",
+            "YXRWaXNpYmlsaXR5EhEKDUFsd2F5c1Zpc2libGUQABIQCgxOZXZlclZpc2li",
+            "bGUQARIUChBWaXNpYmxlSWZOb25aZXJvEAJCH6oCHEluZ3dlbGFuZC5Gb2cu",
+            "SW5uLk1vZGVscy5Ib2hiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO), global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Parser, new[]{ "Id", "U2", "U3", "U4" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO), global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Parser, new[]{ "Id", "Hidden", "TrackedBetweenWaves", "Order", "Group", "Visibility" }, null, new[]{ typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Types.StatVisibility) }, null, null)
           }));
     }
     #endregion
@@ -74,9 +78,11 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HeroUnitStatDefinitionDTO(HeroUnitStatDefinitionDTO other) : this() {
       id_ = other.id_;
-      u2_ = other.u2_;
-      u3_ = other.u3_;
-      u4_ = other.u4_;
+      hidden_ = other.hidden_;
+      trackedBetweenWaves_ = other.trackedBetweenWaves_;
+      order_ = other.order_;
+      group_ = other.group_;
+      visibility_ = other.visibility_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -98,39 +104,63 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       }
     }
 
-    /// <summary>Field number for the "u2" field.</summary>
-    public const int U2FieldNumber = 2;
-    private int u2_;
+    /// <summary>Field number for the "hidden" field.</summary>
+    public const int HiddenFieldNumber = 2;
+    private bool hidden_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int U2 {
-      get { return u2_; }
+    public bool Hidden {
+      get { return hidden_; }
       set {
-        u2_ = value;
+        hidden_ = value;
       }
     }
 
-    /// <summary>Field number for the "u3" field.</summary>
-    public const int U3FieldNumber = 3;
-    private int u3_;
+    /// <summary>Field number for the "tracked_between_waves" field.</summary>
+    public const int TrackedBetweenWavesFieldNumber = 3;
+    private bool trackedBetweenWaves_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int U3 {
-      get { return u3_; }
+    public bool TrackedBetweenWaves {
+      get { return trackedBetweenWaves_; }
       set {
-        u3_ = value;
+        trackedBetweenWaves_ = value;
       }
     }
 
-    /// <summary>Field number for the "u4" field.</summary>
-    public const int U4FieldNumber = 4;
-    private int u4_;
+    /// <summary>Field number for the "order" field.</summary>
+    public const int OrderFieldNumber = 4;
+    private int order_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int U4 {
-      get { return u4_; }
+    public int Order {
+      get { return order_; }
       set {
-        u4_ = value;
+        order_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "group" field.</summary>
+    public const int GroupFieldNumber = 5;
+    private string group_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Group {
+      get { return group_; }
+      set {
+        group_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "visibility" field.</summary>
+    public const int VisibilityFieldNumber = 6;
+    private global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Types.StatVisibility visibility_ = global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Types.StatVisibility.AlwaysVisible;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Types.StatVisibility Visibility {
+      get { return visibility_; }
+      set {
+        visibility_ = value;
       }
     }
 
@@ -150,9 +180,11 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
         return true;
       }
       if (Id != other.Id) return false;
-      if (U2 != other.U2) return false;
-      if (U3 != other.U3) return false;
-      if (U4 != other.U4) return false;
+      if (Hidden != other.Hidden) return false;
+      if (TrackedBetweenWaves != other.TrackedBetweenWaves) return false;
+      if (Order != other.Order) return false;
+      if (Group != other.Group) return false;
+      if (Visibility != other.Visibility) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,9 +193,11 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (U2 != 0) hash ^= U2.GetHashCode();
-      if (U3 != 0) hash ^= U3.GetHashCode();
-      if (U4 != 0) hash ^= U4.GetHashCode();
+      if (Hidden != false) hash ^= Hidden.GetHashCode();
+      if (TrackedBetweenWaves != false) hash ^= TrackedBetweenWaves.GetHashCode();
+      if (Order != 0) hash ^= Order.GetHashCode();
+      if (Group.Length != 0) hash ^= Group.GetHashCode();
+      if (Visibility != global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Types.StatVisibility.AlwaysVisible) hash ^= Visibility.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -186,17 +220,25 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (U2 != 0) {
+      if (Hidden != false) {
         output.WriteRawTag(16);
-        output.WriteInt32(U2);
+        output.WriteBool(Hidden);
       }
-      if (U3 != 0) {
+      if (TrackedBetweenWaves != false) {
         output.WriteRawTag(24);
-        output.WriteInt32(U3);
+        output.WriteBool(TrackedBetweenWaves);
       }
-      if (U4 != 0) {
+      if (Order != 0) {
         output.WriteRawTag(32);
-        output.WriteInt32(U4);
+        output.WriteInt32(Order);
+      }
+      if (Group.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Group);
+      }
+      if (Visibility != global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Types.StatVisibility.AlwaysVisible) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Visibility);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -212,17 +254,25 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (U2 != 0) {
+      if (Hidden != false) {
         output.WriteRawTag(16);
-        output.WriteInt32(U2);
+        output.WriteBool(Hidden);
       }
-      if (U3 != 0) {
+      if (TrackedBetweenWaves != false) {
         output.WriteRawTag(24);
-        output.WriteInt32(U3);
+        output.WriteBool(TrackedBetweenWaves);
       }
-      if (U4 != 0) {
+      if (Order != 0) {
         output.WriteRawTag(32);
-        output.WriteInt32(U4);
+        output.WriteInt32(Order);
+      }
+      if (Group.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Group);
+      }
+      if (Visibility != global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Types.StatVisibility.AlwaysVisible) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Visibility);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -237,14 +287,20 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (U2 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(U2);
+      if (Hidden != false) {
+        size += 1 + 1;
       }
-      if (U3 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(U3);
+      if (TrackedBetweenWaves != false) {
+        size += 1 + 1;
       }
-      if (U4 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(U4);
+      if (Order != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Order);
+      }
+      if (Group.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Group);
+      }
+      if (Visibility != global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Types.StatVisibility.AlwaysVisible) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Visibility);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -261,14 +317,20 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.U2 != 0) {
-        U2 = other.U2;
+      if (other.Hidden != false) {
+        Hidden = other.Hidden;
       }
-      if (other.U3 != 0) {
-        U3 = other.U3;
+      if (other.TrackedBetweenWaves != false) {
+        TrackedBetweenWaves = other.TrackedBetweenWaves;
       }
-      if (other.U4 != 0) {
-        U4 = other.U4;
+      if (other.Order != 0) {
+        Order = other.Order;
+      }
+      if (other.Group.Length != 0) {
+        Group = other.Group;
+      }
+      if (other.Visibility != global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Types.StatVisibility.AlwaysVisible) {
+        Visibility = other.Visibility;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -294,15 +356,23 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
             break;
           }
           case 16: {
-            U2 = input.ReadInt32();
+            Hidden = input.ReadBool();
             break;
           }
           case 24: {
-            U3 = input.ReadInt32();
+            TrackedBetweenWaves = input.ReadBool();
             break;
           }
           case 32: {
-            U4 = input.ReadInt32();
+            Order = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            Group = input.ReadString();
+            break;
+          }
+          case 48: {
+            Visibility = (global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Types.StatVisibility) input.ReadEnum();
             break;
           }
         }
@@ -329,21 +399,43 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
             break;
           }
           case 16: {
-            U2 = input.ReadInt32();
+            Hidden = input.ReadBool();
             break;
           }
           case 24: {
-            U3 = input.ReadInt32();
+            TrackedBetweenWaves = input.ReadBool();
             break;
           }
           case 32: {
-            U4 = input.ReadInt32();
+            Order = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            Group = input.ReadString();
+            break;
+          }
+          case 48: {
+            Visibility = (global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitStatDefinitionDTO.Types.StatVisibility) input.ReadEnum();
             break;
           }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the HeroUnitStatDefinitionDTO message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      public enum StatVisibility {
+        [pbr::OriginalName("AlwaysVisible")] AlwaysVisible = 0,
+        [pbr::OriginalName("NeverVisible")] NeverVisible = 1,
+        [pbr::OriginalName("VisibleIfNonZero")] VisibleIfNonZero = 2,
+      }
+
+    }
+    #endregion
 
   }
 

@@ -8,6 +8,10 @@ message HeroFinishWaveRequestDto {
   google.protobuf.BytesValue battle_id = 2;
   repeated WaveResultUnitStatDto unit_stats = 3;
   WaveTimelineDto timeline = 4;
+  bool used_auto_battle = 6;
+  float battle_speed = 7;
+  repeated RecordedBattleAction recorded_actions = 8;
+  FixedPointDTO last_update_time = 10;
 }
 
 message WaveResultUnitStatDto {
@@ -54,4 +58,20 @@ message WaveTimelineAffectedStatDto {
 
 message WaveTimelineUnitIdentifierDto {
   int32 in_battle_id = 1;
+}
+
+message RecordedBattleAction {
+  message TriggerAbilityForUnit {
+    int32 unit_id = 1;
+  }
+  message SetHeroAutoCast {
+    int32 unit_id = 1;
+    bool enabled = 2;
+  }
+  FixedPointDTO time = 4;
+  oneof action {
+    RecordedBattleAction.TriggerAbilityForUnit trigger_ability_for_unit = 2;
+    bool try_toggle_auto_battle = 3;
+    RecordedBattleAction.SetHeroAutoCast set_hero_auto_cast = 5;
+  }
 }

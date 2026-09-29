@@ -3,8 +3,15 @@ syntax = "proto3";
 option csharp_namespace = "Ingweland.Fog.Inn.Models.Hoh";
 
 message HeroUnitStatDefinitionDTO {
+  enum StatVisibility {
+    AlwaysVisible = 0;
+    NeverVisible = 1;
+    VisibleIfNonZero = 2;
+  }
   string id = 1;
-  int32 u2 = 2;
-  int32 u3 = 3;
-  int32 u4 = 4;
+  bool hidden = 2;
+  bool tracked_between_waves = 3;
+  int32 order = 4;
+  string group = 5;
+  StatVisibility visibility = 6;
 }

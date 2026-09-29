@@ -26,35 +26,46 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
           string.Concat(
             "CiJoZXJvX2ZpbmlzaF93YXZlX3JlcXVlc3RfZHRvLnByb3RvGh5nb29nbGUv",
             "cHJvdG9idWYvd3JhcHBlcnMucHJvdG8aFWZpeGVkX3BvaW50X2R0by5wcm90",
-            "byKaAQoYSGVyb0ZpbmlzaFdhdmVSZXF1ZXN0RHRvEi4KCWJhdHRsZV9pZBgC",
+            "byKlAgoYSGVyb0ZpbmlzaFdhdmVSZXF1ZXN0RHRvEi4KCWJhdHRsZV9pZBgC",
             "IAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5CeXRlc1ZhbHVlEioKCnVuaXRfc3Rh",
             "dHMYAyADKAsyFi5XYXZlUmVzdWx0VW5pdFN0YXREdG8SIgoIdGltZWxpbmUY",
-            "BCABKAsyEC5XYXZlVGltZWxpbmVEdG8iXQoVV2F2ZVJlc3VsdFVuaXRTdGF0",
-            "RHRvEhEKCXVuaXRfc3RhdBgBIAEoCRIrCgZ2YWx1ZXMYAyADKAsyGy5XYXZl",
-            "UmVzdWx0VW5pdFN0YXRWYWx1ZUR0b0oECAIQAyJRChpXYXZlUmVzdWx0VW5p",
-            "dFN0YXRWYWx1ZUR0bxIUCgxpbl9iYXR0bGVfaWQYASABKAUSHQoFdmFsdWUY",
-            "AiABKAsyDi5GaXhlZFBvaW50RFRPIjkKD1dhdmVUaW1lbGluZUR0bxImCgdl",
-            "bnRyaWVzGAEgAygLMhUuV2F2ZVRpbWVsaW5lRW50cnlEdG8inwEKFFdhdmVU",
-            "aW1lbGluZUVudHJ5RHRvEhkKEXRpbWVfbWlsbGlzZWNvbmRzGAEgASgFEjUK",
-            "DmFiaWxpdHlfY2FzdGVyGAsgASgLMh0uV2F2ZVRpbWVsaW5lQWJpbGl0eUNh",
-            "c3RlckR0bxI1Cg5hYmlsaXR5X3RhcmdldBgMIAEoCzIdLldhdmVUaW1lbGlu",
-            "ZUFiaWxpdHlUYXJnZXREdG8ikAEKHFdhdmVUaW1lbGluZUFiaWxpdHlDYXN0",
-            "ZXJEdG8SJAocYmF0dGxlX2FiaWxpdHlfZGVmaW5pdGlvbl9pZBgBIAEoCRIa",
-            "ChJ0aW1lbGluZV9hY3Rpb25faWQYAiABKAUSLgoGY2FzdGVyGAQgASgLMh4u",
-            "V2F2ZVRpbWVsaW5lVW5pdElkZW50aWZpZXJEdG8i7QEKHFdhdmVUaW1lbGlu",
-            "ZUFiaWxpdHlUYXJnZXREdG8SGgoSdGltZWxpbmVfYWN0aW9uX2lkGAEgASgF",
-            "Ei4KBmNhc3RlchgHIAEoCzIeLldhdmVUaW1lbGluZVVuaXRJZGVudGlmaWVy",
-            "RHRvEi4KBnRhcmdldBgIIAEoCzIeLldhdmVUaW1lbGluZVVuaXRJZGVudGlm",
-            "aWVyRHRvEgoKAnUxGGsgASgJEi8KCXVuaXRfc3RhdBhwIAEoCzIcLldhdmVU",
-            "aW1lbGluZUFmZmVjdGVkU3RhdER0bxIUCgxyZXN1bHRfdmFsdWUYcyABKAUi",
-            "UgobV2F2ZVRpbWVsaW5lQWZmZWN0ZWRTdGF0RHRvEhEKCXVuaXRfc3RhdBgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoAhIRCgl1MV9zdGF0dXMYCyABKAUiNQodV2F2",
-            "ZVRpbWVsaW5lVW5pdElkZW50aWZpZXJEdG8SFAoMaW5fYmF0dGxlX2lkGAEg",
-            "ASgFQh+qAhxJbmd3ZWxhbmQuRm9nLklubi5Nb2RlbHMuSG9oYgZwcm90bzM="));
+            "BCABKAsyEC5XYXZlVGltZWxpbmVEdG8SGAoQdXNlZF9hdXRvX2JhdHRsZRgG",
+            "IAEoCBIUCgxiYXR0bGVfc3BlZWQYByABKAISLwoQcmVjb3JkZWRfYWN0aW9u",
+            "cxgIIAMoCzIVLlJlY29yZGVkQmF0dGxlQWN0aW9uEigKEGxhc3RfdXBkYXRl",
+            "X3RpbWUYCiABKAsyDi5GaXhlZFBvaW50RFRPIl0KFVdhdmVSZXN1bHRVbml0",
+            "U3RhdER0bxIRCgl1bml0X3N0YXQYASABKAkSKwoGdmFsdWVzGAMgAygLMhsu",
+            "V2F2ZVJlc3VsdFVuaXRTdGF0VmFsdWVEdG9KBAgCEAMiUQoaV2F2ZVJlc3Vs",
+            "dFVuaXRTdGF0VmFsdWVEdG8SFAoMaW5fYmF0dGxlX2lkGAEgASgFEh0KBXZh",
+            "bHVlGAIgASgLMg4uRml4ZWRQb2ludERUTyI5Cg9XYXZlVGltZWxpbmVEdG8S",
+            "JgoHZW50cmllcxgBIAMoCzIVLldhdmVUaW1lbGluZUVudHJ5RHRvIp8BChRX",
+            "YXZlVGltZWxpbmVFbnRyeUR0bxIZChF0aW1lX21pbGxpc2Vjb25kcxgBIAEo",
+            "BRI1Cg5hYmlsaXR5X2Nhc3RlchgLIAEoCzIdLldhdmVUaW1lbGluZUFiaWxp",
+            "dHlDYXN0ZXJEdG8SNQoOYWJpbGl0eV90YXJnZXQYDCABKAsyHS5XYXZlVGlt",
+            "ZWxpbmVBYmlsaXR5VGFyZ2V0RHRvIpABChxXYXZlVGltZWxpbmVBYmlsaXR5",
+            "Q2FzdGVyRHRvEiQKHGJhdHRsZV9hYmlsaXR5X2RlZmluaXRpb25faWQYASAB",
+            "KAkSGgoSdGltZWxpbmVfYWN0aW9uX2lkGAIgASgFEi4KBmNhc3RlchgEIAEo",
+            "CzIeLldhdmVUaW1lbGluZVVuaXRJZGVudGlmaWVyRHRvIu0BChxXYXZlVGlt",
+            "ZWxpbmVBYmlsaXR5VGFyZ2V0RHRvEhoKEnRpbWVsaW5lX2FjdGlvbl9pZBgB",
+            "IAEoBRIuCgZjYXN0ZXIYByABKAsyHi5XYXZlVGltZWxpbmVVbml0SWRlbnRp",
+            "ZmllckR0bxIuCgZ0YXJnZXQYCCABKAsyHi5XYXZlVGltZWxpbmVVbml0SWRl",
+            "bnRpZmllckR0bxIKCgJ1MRhrIAEoCRIvCgl1bml0X3N0YXQYcCABKAsyHC5X",
+            "YXZlVGltZWxpbmVBZmZlY3RlZFN0YXREdG8SFAoMcmVzdWx0X3ZhbHVlGHMg",
+            "ASgFIlIKG1dhdmVUaW1lbGluZUFmZmVjdGVkU3RhdER0bxIRCgl1bml0X3N0",
+            "YXQYASABKAkSDQoFdmFsdWUYAiABKAISEQoJdTFfc3RhdHVzGAsgASgFIjUK",
+            "HVdhdmVUaW1lbGluZVVuaXRJZGVudGlmaWVyRHRvEhQKDGluX2JhdHRsZV9p",
+            "ZBgBIAEoBSLVAgoUUmVjb3JkZWRCYXR0bGVBY3Rpb24SHAoEdGltZRgEIAEo",
+            "CzIOLkZpeGVkUG9pbnREVE8STwoYdHJpZ2dlcl9hYmlsaXR5X2Zvcl91bml0",
+            "GAIgASgLMisuUmVjb3JkZWRCYXR0bGVBY3Rpb24uVHJpZ2dlckFiaWxpdHlG",
+            "b3JVbml0SAASIAoWdHJ5X3RvZ2dsZV9hdXRvX2JhdHRsZRgDIAEoCEgAEkMK",
+            "EnNldF9oZXJvX2F1dG9fY2FzdBgFIAEoCzIlLlJlY29yZGVkQmF0dGxlQWN0",
+            "aW9uLlNldEhlcm9BdXRvQ2FzdEgAGigKFVRyaWdnZXJBYmlsaXR5Rm9yVW5p",
+            "dBIPCgd1bml0X2lkGAEgASgFGjMKD1NldEhlcm9BdXRvQ2FzdBIPCgd1bml0",
+            "X2lkGAEgASgFEg8KB2VuYWJsZWQYAiABKAhCCAoGYWN0aW9uQh+qAhxJbmd3",
+            "ZWxhbmQuRm9nLklubi5Nb2RlbHMuSG9oYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDtoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroFinishWaveRequestDto), global::Ingweland.Fog.Inn.Models.Hoh.HeroFinishWaveRequestDto.Parser, new[]{ "BattleId", "UnitStats", "Timeline" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroFinishWaveRequestDto), global::Ingweland.Fog.Inn.Models.Hoh.HeroFinishWaveRequestDto.Parser, new[]{ "BattleId", "UnitStats", "Timeline", "UsedAutoBattle", "BattleSpeed", "RecordedActions", "LastUpdateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.WaveResultUnitStatDto), global::Ingweland.Fog.Inn.Models.Hoh.WaveResultUnitStatDto.Parser, new[]{ "UnitStat", "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.WaveResultUnitStatValueDto), global::Ingweland.Fog.Inn.Models.Hoh.WaveResultUnitStatValueDto.Parser, new[]{ "InBattleId", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineDto), global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineDto.Parser, new[]{ "Entries" }, null, null, null, null),
@@ -62,7 +73,9 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineAbilityCasterDto), global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineAbilityCasterDto.Parser, new[]{ "BattleAbilityDefinitionId", "TimelineActionId", "Caster" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineAbilityTargetDto), global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineAbilityTargetDto.Parser, new[]{ "TimelineActionId", "Caster", "Target", "U1", "UnitStat", "ResultValue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineAffectedStatDto), global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineAffectedStatDto.Parser, new[]{ "UnitStat", "Value", "U1Status" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineUnitIdentifierDto), global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineUnitIdentifierDto.Parser, new[]{ "InBattleId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineUnitIdentifierDto), global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineUnitIdentifierDto.Parser, new[]{ "InBattleId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction), global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Parser, new[]{ "Time", "TriggerAbilityForUnit", "TryToggleAutoBattle", "SetHeroAutoCast" }, new[]{ "Action" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.TriggerAbilityForUnit), global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.TriggerAbilityForUnit.Parser, new[]{ "UnitId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.SetHeroAutoCast), global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.SetHeroAutoCast.Parser, new[]{ "UnitId", "Enabled" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -107,6 +120,10 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       BattleId = other.BattleId;
       unitStats_ = other.unitStats_.Clone();
       timeline_ = other.timeline_ != null ? other.timeline_.Clone() : null;
+      usedAutoBattle_ = other.usedAutoBattle_;
+      battleSpeed_ = other.battleSpeed_;
+      recordedActions_ = other.recordedActions_.Clone();
+      lastUpdateTime_ = other.lastUpdateTime_ != null ? other.lastUpdateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -153,6 +170,53 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       }
     }
 
+    /// <summary>Field number for the "used_auto_battle" field.</summary>
+    public const int UsedAutoBattleFieldNumber = 6;
+    private bool usedAutoBattle_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UsedAutoBattle {
+      get { return usedAutoBattle_; }
+      set {
+        usedAutoBattle_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "battle_speed" field.</summary>
+    public const int BattleSpeedFieldNumber = 7;
+    private float battleSpeed_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float BattleSpeed {
+      get { return battleSpeed_; }
+      set {
+        battleSpeed_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "recorded_actions" field.</summary>
+    public const int RecordedActionsFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction> _repeated_recordedActions_codec
+        = pb::FieldCodec.ForMessage(66, global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Parser);
+    private readonly pbc::RepeatedField<global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction> recordedActions_ = new pbc::RepeatedField<global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction> RecordedActions {
+      get { return recordedActions_; }
+    }
+
+    /// <summary>Field number for the "last_update_time" field.</summary>
+    public const int LastUpdateTimeFieldNumber = 10;
+    private global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO lastUpdateTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO LastUpdateTime {
+      get { return lastUpdateTime_; }
+      set {
+        lastUpdateTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -171,6 +235,10 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       if (BattleId != other.BattleId) return false;
       if(!unitStats_.Equals(other.unitStats_)) return false;
       if (!object.Equals(Timeline, other.Timeline)) return false;
+      if (UsedAutoBattle != other.UsedAutoBattle) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(BattleSpeed, other.BattleSpeed)) return false;
+      if(!recordedActions_.Equals(other.recordedActions_)) return false;
+      if (!object.Equals(LastUpdateTime, other.LastUpdateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -181,6 +249,10 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       if (battleId_ != null) hash ^= BattleId.GetHashCode();
       hash ^= unitStats_.GetHashCode();
       if (timeline_ != null) hash ^= Timeline.GetHashCode();
+      if (UsedAutoBattle != false) hash ^= UsedAutoBattle.GetHashCode();
+      if (BattleSpeed != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(BattleSpeed);
+      hash ^= recordedActions_.GetHashCode();
+      if (lastUpdateTime_ != null) hash ^= LastUpdateTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -207,6 +279,19 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
         output.WriteRawTag(34);
         output.WriteMessage(Timeline);
       }
+      if (UsedAutoBattle != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(UsedAutoBattle);
+      }
+      if (BattleSpeed != 0F) {
+        output.WriteRawTag(61);
+        output.WriteFloat(BattleSpeed);
+      }
+      recordedActions_.WriteTo(output, _repeated_recordedActions_codec);
+      if (lastUpdateTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(LastUpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -225,6 +310,19 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
         output.WriteRawTag(34);
         output.WriteMessage(Timeline);
       }
+      if (UsedAutoBattle != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(UsedAutoBattle);
+      }
+      if (BattleSpeed != 0F) {
+        output.WriteRawTag(61);
+        output.WriteFloat(BattleSpeed);
+      }
+      recordedActions_.WriteTo(ref output, _repeated_recordedActions_codec);
+      if (lastUpdateTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(LastUpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -241,6 +339,16 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       size += unitStats_.CalculateSize(_repeated_unitStats_codec);
       if (timeline_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timeline);
+      }
+      if (UsedAutoBattle != false) {
+        size += 1 + 1;
+      }
+      if (BattleSpeed != 0F) {
+        size += 1 + 4;
+      }
+      size += recordedActions_.CalculateSize(_repeated_recordedActions_codec);
+      if (lastUpdateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUpdateTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -265,6 +373,19 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
           Timeline = new global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineDto();
         }
         Timeline.MergeFrom(other.Timeline);
+      }
+      if (other.UsedAutoBattle != false) {
+        UsedAutoBattle = other.UsedAutoBattle;
+      }
+      if (other.BattleSpeed != 0F) {
+        BattleSpeed = other.BattleSpeed;
+      }
+      recordedActions_.Add(other.recordedActions_);
+      if (other.lastUpdateTime_ != null) {
+        if (lastUpdateTime_ == null) {
+          LastUpdateTime = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+        }
+        LastUpdateTime.MergeFrom(other.LastUpdateTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -303,6 +424,25 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
             input.ReadMessage(Timeline);
             break;
           }
+          case 48: {
+            UsedAutoBattle = input.ReadBool();
+            break;
+          }
+          case 61: {
+            BattleSpeed = input.ReadFloat();
+            break;
+          }
+          case 66: {
+            recordedActions_.AddEntriesFrom(input, _repeated_recordedActions_codec);
+            break;
+          }
+          case 82: {
+            if (lastUpdateTime_ == null) {
+              LastUpdateTime = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(LastUpdateTime);
+            break;
+          }
         }
       }
     #endif
@@ -338,6 +478,25 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
               Timeline = new global::Ingweland.Fog.Inn.Models.Hoh.WaveTimelineDto();
             }
             input.ReadMessage(Timeline);
+            break;
+          }
+          case 48: {
+            UsedAutoBattle = input.ReadBool();
+            break;
+          }
+          case 61: {
+            BattleSpeed = input.ReadFloat();
+            break;
+          }
+          case 66: {
+            recordedActions_.AddEntriesFrom(ref input, _repeated_recordedActions_codec);
+            break;
+          }
+          case 82: {
+            if (lastUpdateTime_ == null) {
+              LastUpdateTime = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(LastUpdateTime);
             break;
           }
         }
@@ -2450,6 +2609,841 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       }
     }
     #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RecordedBattleAction : pb::IMessage<RecordedBattleAction>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RecordedBattleAction> _parser = new pb::MessageParser<RecordedBattleAction>(() => new RecordedBattleAction());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RecordedBattleAction> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ingweland.Fog.Inn.Models.Hoh.HeroFinishWaveRequestDtoReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RecordedBattleAction() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RecordedBattleAction(RecordedBattleAction other) : this() {
+      time_ = other.time_ != null ? other.time_.Clone() : null;
+      switch (other.ActionCase) {
+        case ActionOneofCase.TriggerAbilityForUnit:
+          TriggerAbilityForUnit = other.TriggerAbilityForUnit.Clone();
+          break;
+        case ActionOneofCase.TryToggleAutoBattle:
+          TryToggleAutoBattle = other.TryToggleAutoBattle;
+          break;
+        case ActionOneofCase.SetHeroAutoCast:
+          SetHeroAutoCast = other.SetHeroAutoCast.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RecordedBattleAction Clone() {
+      return new RecordedBattleAction(this);
+    }
+
+    /// <summary>Field number for the "time" field.</summary>
+    public const int TimeFieldNumber = 4;
+    private global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO time_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO Time {
+      get { return time_; }
+      set {
+        time_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "trigger_ability_for_unit" field.</summary>
+    public const int TriggerAbilityForUnitFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.TriggerAbilityForUnit TriggerAbilityForUnit {
+      get { return actionCase_ == ActionOneofCase.TriggerAbilityForUnit ? (global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.TriggerAbilityForUnit) action_ : null; }
+      set {
+        action_ = value;
+        actionCase_ = value == null ? ActionOneofCase.None : ActionOneofCase.TriggerAbilityForUnit;
+      }
+    }
+
+    /// <summary>Field number for the "try_toggle_auto_battle" field.</summary>
+    public const int TryToggleAutoBattleFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool TryToggleAutoBattle {
+      get { return HasTryToggleAutoBattle ? (bool) action_ : false; }
+      set {
+        action_ = value;
+        actionCase_ = ActionOneofCase.TryToggleAutoBattle;
+      }
+    }
+    /// <summary>Gets whether the "try_toggle_auto_battle" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTryToggleAutoBattle {
+      get { return actionCase_ == ActionOneofCase.TryToggleAutoBattle; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "try_toggle_auto_battle" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTryToggleAutoBattle() {
+      if (HasTryToggleAutoBattle) {
+        ClearAction();
+      }
+    }
+
+    /// <summary>Field number for the "set_hero_auto_cast" field.</summary>
+    public const int SetHeroAutoCastFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.SetHeroAutoCast SetHeroAutoCast {
+      get { return actionCase_ == ActionOneofCase.SetHeroAutoCast ? (global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.SetHeroAutoCast) action_ : null; }
+      set {
+        action_ = value;
+        actionCase_ = value == null ? ActionOneofCase.None : ActionOneofCase.SetHeroAutoCast;
+      }
+    }
+
+    private object action_;
+    /// <summary>Enum of possible cases for the "action" oneof.</summary>
+    public enum ActionOneofCase {
+      None = 0,
+      TriggerAbilityForUnit = 2,
+      TryToggleAutoBattle = 3,
+      SetHeroAutoCast = 5,
+    }
+    private ActionOneofCase actionCase_ = ActionOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActionOneofCase ActionCase {
+      get { return actionCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAction() {
+      actionCase_ = ActionOneofCase.None;
+      action_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RecordedBattleAction);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RecordedBattleAction other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Time, other.Time)) return false;
+      if (!object.Equals(TriggerAbilityForUnit, other.TriggerAbilityForUnit)) return false;
+      if (TryToggleAutoBattle != other.TryToggleAutoBattle) return false;
+      if (!object.Equals(SetHeroAutoCast, other.SetHeroAutoCast)) return false;
+      if (ActionCase != other.ActionCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (time_ != null) hash ^= Time.GetHashCode();
+      if (actionCase_ == ActionOneofCase.TriggerAbilityForUnit) hash ^= TriggerAbilityForUnit.GetHashCode();
+      if (HasTryToggleAutoBattle) hash ^= TryToggleAutoBattle.GetHashCode();
+      if (actionCase_ == ActionOneofCase.SetHeroAutoCast) hash ^= SetHeroAutoCast.GetHashCode();
+      hash ^= (int) actionCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (actionCase_ == ActionOneofCase.TriggerAbilityForUnit) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TriggerAbilityForUnit);
+      }
+      if (HasTryToggleAutoBattle) {
+        output.WriteRawTag(24);
+        output.WriteBool(TryToggleAutoBattle);
+      }
+      if (time_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Time);
+      }
+      if (actionCase_ == ActionOneofCase.SetHeroAutoCast) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SetHeroAutoCast);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (actionCase_ == ActionOneofCase.TriggerAbilityForUnit) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TriggerAbilityForUnit);
+      }
+      if (HasTryToggleAutoBattle) {
+        output.WriteRawTag(24);
+        output.WriteBool(TryToggleAutoBattle);
+      }
+      if (time_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Time);
+      }
+      if (actionCase_ == ActionOneofCase.SetHeroAutoCast) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SetHeroAutoCast);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (time_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Time);
+      }
+      if (actionCase_ == ActionOneofCase.TriggerAbilityForUnit) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TriggerAbilityForUnit);
+      }
+      if (HasTryToggleAutoBattle) {
+        size += 1 + 1;
+      }
+      if (actionCase_ == ActionOneofCase.SetHeroAutoCast) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SetHeroAutoCast);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RecordedBattleAction other) {
+      if (other == null) {
+        return;
+      }
+      if (other.time_ != null) {
+        if (time_ == null) {
+          Time = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+        }
+        Time.MergeFrom(other.Time);
+      }
+      switch (other.ActionCase) {
+        case ActionOneofCase.TriggerAbilityForUnit:
+          if (TriggerAbilityForUnit == null) {
+            TriggerAbilityForUnit = new global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.TriggerAbilityForUnit();
+          }
+          TriggerAbilityForUnit.MergeFrom(other.TriggerAbilityForUnit);
+          break;
+        case ActionOneofCase.TryToggleAutoBattle:
+          TryToggleAutoBattle = other.TryToggleAutoBattle;
+          break;
+        case ActionOneofCase.SetHeroAutoCast:
+          if (SetHeroAutoCast == null) {
+            SetHeroAutoCast = new global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.SetHeroAutoCast();
+          }
+          SetHeroAutoCast.MergeFrom(other.SetHeroAutoCast);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.TriggerAbilityForUnit subBuilder = new global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.TriggerAbilityForUnit();
+            if (actionCase_ == ActionOneofCase.TriggerAbilityForUnit) {
+              subBuilder.MergeFrom(TriggerAbilityForUnit);
+            }
+            input.ReadMessage(subBuilder);
+            TriggerAbilityForUnit = subBuilder;
+            break;
+          }
+          case 24: {
+            TryToggleAutoBattle = input.ReadBool();
+            break;
+          }
+          case 34: {
+            if (time_ == null) {
+              Time = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(Time);
+            break;
+          }
+          case 42: {
+            global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.SetHeroAutoCast subBuilder = new global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.SetHeroAutoCast();
+            if (actionCase_ == ActionOneofCase.SetHeroAutoCast) {
+              subBuilder.MergeFrom(SetHeroAutoCast);
+            }
+            input.ReadMessage(subBuilder);
+            SetHeroAutoCast = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.TriggerAbilityForUnit subBuilder = new global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.TriggerAbilityForUnit();
+            if (actionCase_ == ActionOneofCase.TriggerAbilityForUnit) {
+              subBuilder.MergeFrom(TriggerAbilityForUnit);
+            }
+            input.ReadMessage(subBuilder);
+            TriggerAbilityForUnit = subBuilder;
+            break;
+          }
+          case 24: {
+            TryToggleAutoBattle = input.ReadBool();
+            break;
+          }
+          case 34: {
+            if (time_ == null) {
+              Time = new global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO();
+            }
+            input.ReadMessage(Time);
+            break;
+          }
+          case 42: {
+            global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.SetHeroAutoCast subBuilder = new global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Types.SetHeroAutoCast();
+            if (actionCase_ == ActionOneofCase.SetHeroAutoCast) {
+              subBuilder.MergeFrom(SetHeroAutoCast);
+            }
+            input.ReadMessage(subBuilder);
+            SetHeroAutoCast = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RecordedBattleAction message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TriggerAbilityForUnit : pb::IMessage<TriggerAbilityForUnit>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TriggerAbilityForUnit> _parser = new pb::MessageParser<TriggerAbilityForUnit>(() => new TriggerAbilityForUnit());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TriggerAbilityForUnit> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TriggerAbilityForUnit() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TriggerAbilityForUnit(TriggerAbilityForUnit other) : this() {
+          unitId_ = other.unitId_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TriggerAbilityForUnit Clone() {
+          return new TriggerAbilityForUnit(this);
+        }
+
+        /// <summary>Field number for the "unit_id" field.</summary>
+        public const int UnitIdFieldNumber = 1;
+        private int unitId_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int UnitId {
+          get { return unitId_; }
+          set {
+            unitId_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TriggerAbilityForUnit);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TriggerAbilityForUnit other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (UnitId != other.UnitId) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (UnitId != 0) hash ^= UnitId.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (UnitId != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(UnitId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (UnitId != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(UnitId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (UnitId != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(UnitId);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TriggerAbilityForUnit other) {
+          if (other == null) {
+            return;
+          }
+          if (other.UnitId != 0) {
+            UnitId = other.UnitId;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                UnitId = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                UnitId = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SetHeroAutoCast : pb::IMessage<SetHeroAutoCast>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SetHeroAutoCast> _parser = new pb::MessageParser<SetHeroAutoCast>(() => new SetHeroAutoCast());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SetHeroAutoCast> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Ingweland.Fog.Inn.Models.Hoh.RecordedBattleAction.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SetHeroAutoCast() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SetHeroAutoCast(SetHeroAutoCast other) : this() {
+          unitId_ = other.unitId_;
+          enabled_ = other.enabled_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SetHeroAutoCast Clone() {
+          return new SetHeroAutoCast(this);
+        }
+
+        /// <summary>Field number for the "unit_id" field.</summary>
+        public const int UnitIdFieldNumber = 1;
+        private int unitId_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int UnitId {
+          get { return unitId_; }
+          set {
+            unitId_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "enabled" field.</summary>
+        public const int EnabledFieldNumber = 2;
+        private bool enabled_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Enabled {
+          get { return enabled_; }
+          set {
+            enabled_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SetHeroAutoCast);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SetHeroAutoCast other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (UnitId != other.UnitId) return false;
+          if (Enabled != other.Enabled) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (UnitId != 0) hash ^= UnitId.GetHashCode();
+          if (Enabled != false) hash ^= Enabled.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (UnitId != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(UnitId);
+          }
+          if (Enabled != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(Enabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (UnitId != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(UnitId);
+          }
+          if (Enabled != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(Enabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (UnitId != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(UnitId);
+          }
+          if (Enabled != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SetHeroAutoCast other) {
+          if (other == null) {
+            return;
+          }
+          if (other.UnitId != 0) {
+            UnitId = other.UnitId;
+          }
+          if (other.Enabled != false) {
+            Enabled = other.Enabled;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                UnitId = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                Enabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                UnitId = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                Enabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 

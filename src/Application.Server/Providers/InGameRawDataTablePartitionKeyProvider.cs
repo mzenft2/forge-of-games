@@ -38,6 +38,11 @@ public class InGameRawDataTablePartitionKeyProvider
     {
         return WithWorldAndDate("battle-start", worldId, date);
     }
+    
+    public string BattleReplay(string worldId, DateOnly date)
+    {
+        return WithWorldAndDate("battle-replay", worldId, date);
+    }
 
     public string AthAllianceRankings(string worldId, DateOnly date)
     {

@@ -35,35 +35,40 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
             "GAMgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueRIcChRiYXR0bGVfZGVmaW5p",
             "dGlvbl9pZBgEIAEoCRIXCg9uZXh0X3dhdmVfaW5kZXgYBSABKAUSJgoNcGxh",
             "eWVyX3NxdWFkcxgGIAMoCzIPLkJhdHRsZVNxdWFkRHRvEiUKDGVuZW15X3Nx",
-            "dWFkcxgHIAMoCzIPLkJhdHRsZVNxdWFkRHRvIjwKFUJhdHRsZVJlc3VsdFN0",
-            "YXR1c0R0bxIjCgZzdGF0dXMYASABKA4yEy5CYXR0bGVSZXN1bHRTdGF0dXMi",
-            "fAokSGVyb1RyZWFzdXJlSHVudEVuY291bnRlckxvY2F0aW9uRFRPEh4KFnRy",
-            "ZWFzdXJlX2h1bnRfZXZlbnRfaWQYASABKAUSEgoKZGlmZmljdWx0eRgCIAEo",
-            "BRINCgVzdGFnZRgDIAEoBRIRCgllbmNvdW50ZXIYBCABKAUiRQocQ2FtcGFp",
-            "Z25NYXBCYXR0bGVMb2NhdGlvbkRUTxISCgpkaWZmaWN1bHR5GAEgASgJEhEK",
-            "CWVuY291bnRlchgCIAEoCSLJAgoYUHZwQmF0dGxlTG9jYXRpb25EYXRhRFRP",
-            "EhQKDHB2cF9ldmVudF9pZBgBIAEoBRIcChRiYXR0bGVfZGVmaW5pdGlvbl9p",
-            "ZBgCIAEoCRIQCghlbmVteV9pZBgDIAEoBRIZCgVlbmVteRgEIAEoCzIKLlBs",
-            "YXllckR0bxIkCg5lbmVteV9hbGxpYW5jZRgFIAEoCzIMLkFsbGlhbmNlRHRv",
-            "EhwKFGVuZW15X3JhbmtpbmdfcG9pbnRzGAYgASgFEioKDXBvaW50c19vbl93",
-            "aW4YCCABKAsyEy5QdnBSZXN1bHRQb2ludHNEdG8SKwoOcG9pbnRzX29uX2xv",
-            "c3MYCSABKAsyEy5QdnBSZXN1bHRQb2ludHNEdG8SIAoGc3RhZ2VzGAogAygL",
-            "MhAuUHZwU3RhZ2VEYXRhRFRPEg0KBXN0YWdlGAsgASgFIjcKD1B2cFN0YWdl",
-            "RGF0YURUTxIkCgdlbmVtaWVzGAEgAygLMhMuQmF0dGxlV2F2ZVNxdWFkRHRv",
-            "IkIKGUhpc3RvcmljQmF0dGxlTG9jYXRpb25EVE8SEgoKZGlmZmljdWx0eRgB",
-            "IAEoCRIRCgllbmNvdW50ZXIYAiABKAkiVQofUHZwUmV2ZW5nZUJhdHRsZUxv",
-            "Y2F0aW9uRGF0YURUTxIUCgxwdnBfZXZlbnRfaWQYASABKAUSHAoUYmF0dGxl",
-            "X2RlZmluaXRpb25faWQYAiABKAkiVwocQmF0dGxlRXZlbnRCYXR0bGVMb2Nh",
-            "dGlvbkRUTxIQCghldmVudF9pZBgBIAEoBRIlCh1iYXR0bGVfZXZlbnRfYmF0",
-            "dGxlX2NvbXBvbmVudBgCIAEoCSpxChJCYXR0bGVSZXN1bHRTdGF0dXMSIAoc",
-            "QmF0dGxlUmVzdWx0U3RhdHVzX1VOREVGSU5FRBAAEhoKFkJhdHRsZVJlc3Vs",
-            "dFN0YXR1c19XSU4QARIdChlCYXR0bGVSZXN1bHRTdGF0dXNfREVGRUFUEAJC",
-            "H6oCHEluZ3dlbGFuZC5Gb2cuSW5uLk1vZGVscy5Ib2hiBnByb3RvMw=="));
+            "dWFkcxgHIAMoCzIPLkJhdHRsZVNxdWFkRHRvIncKFUJhdHRsZVJlc3VsdFN0",
+            "YXR1c0R0bxIjCgZzdGF0dXMYASABKA4yEy5CYXR0bGVSZXN1bHRTdGF0dXMS",
+            "KgoLbG9zdF9yZWFzb24YAiABKA4yFS5IZXJvQmF0dGxlTG9zdFJlYXNvbhIN",
+            "CgVzdGFycxgDIAEoBSJ8CiRIZXJvVHJlYXN1cmVIdW50RW5jb3VudGVyTG9j",
+            "YXRpb25EVE8SHgoWdHJlYXN1cmVfaHVudF9ldmVudF9pZBgBIAEoBRISCgpk",
+            "aWZmaWN1bHR5GAIgASgFEg0KBXN0YWdlGAMgASgFEhEKCWVuY291bnRlchgE",
+            "IAEoBSJFChxDYW1wYWlnbk1hcEJhdHRsZUxvY2F0aW9uRFRPEhIKCmRpZmZp",
+            "Y3VsdHkYASABKAkSEQoJZW5jb3VudGVyGAIgASgJIskCChhQdnBCYXR0bGVM",
+            "b2NhdGlvbkRhdGFEVE8SFAoMcHZwX2V2ZW50X2lkGAEgASgFEhwKFGJhdHRs",
+            "ZV9kZWZpbml0aW9uX2lkGAIgASgJEhAKCGVuZW15X2lkGAMgASgFEhkKBWVu",
+            "ZW15GAQgASgLMgouUGxheWVyRHRvEiQKDmVuZW15X2FsbGlhbmNlGAUgASgL",
+            "MgwuQWxsaWFuY2VEdG8SHAoUZW5lbXlfcmFua2luZ19wb2ludHMYBiABKAUS",
+            "KgoNcG9pbnRzX29uX3dpbhgIIAEoCzITLlB2cFJlc3VsdFBvaW50c0R0bxIr",
+            "Cg5wb2ludHNfb25fbG9zcxgJIAEoCzITLlB2cFJlc3VsdFBvaW50c0R0bxIg",
+            "CgZzdGFnZXMYCiADKAsyEC5QdnBTdGFnZURhdGFEVE8SDQoFc3RhZ2UYCyAB",
+            "KAUiNwoPUHZwU3RhZ2VEYXRhRFRPEiQKB2VuZW1pZXMYASADKAsyEy5CYXR0",
+            "bGVXYXZlU3F1YWREdG8iQgoZSGlzdG9yaWNCYXR0bGVMb2NhdGlvbkRUTxIS",
+            "CgpkaWZmaWN1bHR5GAEgASgJEhEKCWVuY291bnRlchgCIAEoCSJVCh9QdnBS",
+            "ZXZlbmdlQmF0dGxlTG9jYXRpb25EYXRhRFRPEhQKDHB2cF9ldmVudF9pZBgB",
+            "IAEoBRIcChRiYXR0bGVfZGVmaW5pdGlvbl9pZBgCIAEoCSJXChxCYXR0bGVF",
+            "dmVudEJhdHRsZUxvY2F0aW9uRFRPEhAKCGV2ZW50X2lkGAEgASgFEiUKHWJh",
+            "dHRsZV9ldmVudF9iYXR0bGVfY29tcG9uZW50GAIgASgJKnEKEkJhdHRsZVJl",
+            "c3VsdFN0YXR1cxIgChxCYXR0bGVSZXN1bHRTdGF0dXNfVU5ERUZJTkVEEAAS",
+            "GgoWQmF0dGxlUmVzdWx0U3RhdHVzX1dJThABEh0KGUJhdHRsZVJlc3VsdFN0",
+            "YXR1c19ERUZFQVQQAiqCAQoUSGVyb0JhdHRsZUxvc3RSZWFzb24SIQodSGVy",
+            "b0JhdHRsZUxvc3RSZWFzb25fREVGRUFURUQQABIjCh9IZXJvQmF0dGxlTG9z",
+            "dFJlYXNvbl9USU1FX0lTX1VQEAESIgoeSGVyb0JhdHRsZUxvc3RSZWFzb25f",
+            "UkVUUkVBVEVEEAJCH6oCHEluZ3dlbGFuZC5Gb2cuSW5uLk1vZGVscy5Ib2hi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Ingweland.Fog.Inn.Models.Hoh.PlayerDtoReflection.Descriptor, global::Ingweland.Fog.Inn.Models.Hoh.AllianceDtoReflection.Descriptor, global::Ingweland.Fog.Inn.Models.Hoh.PvpResultPointsDtoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Ingweland.Fog.Inn.Models.Hoh.BattleSquadDtoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleWaveDefinitionDtoReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ingweland.Fog.Inn.Models.Hoh.BattleResultStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ingweland.Fog.Inn.Models.Hoh.BattleResultStatus), typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleLostReason), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.BattleSummaryDto), global::Ingweland.Fog.Inn.Models.Hoh.BattleSummaryDto.Parser, new[]{ "BattleId", "ResultStatus", "PackedEncounterLocation", "BattleDefinitionId", "NextWaveIndex", "PlayerSquads", "EnemySquads" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.BattleResultStatusDto), global::Ingweland.Fog.Inn.Models.Hoh.BattleResultStatusDto.Parser, new[]{ "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.BattleResultStatusDto), global::Ingweland.Fog.Inn.Models.Hoh.BattleResultStatusDto.Parser, new[]{ "Status", "LostReason", "Stars" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroTreasureHuntEncounterLocationDTO), global::Ingweland.Fog.Inn.Models.Hoh.HeroTreasureHuntEncounterLocationDTO.Parser, new[]{ "TreasureHuntEventId", "Difficulty", "Stage", "Encounter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.CampaignMapBattleLocationDTO), global::Ingweland.Fog.Inn.Models.Hoh.CampaignMapBattleLocationDTO.Parser, new[]{ "Difficulty", "Encounter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.PvpBattleLocationDataDTO), global::Ingweland.Fog.Inn.Models.Hoh.PvpBattleLocationDataDTO.Parser, new[]{ "PvpEventId", "BattleDefinitionId", "EnemyId", "Enemy", "EnemyAlliance", "EnemyRankingPoints", "PointsOnWin", "PointsOnLoss", "Stages", "Stage" }, null, null, null, null),
@@ -81,6 +86,12 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
     [pbr::OriginalName("BattleResultStatus_UNDEFINED")] Undefined = 0,
     [pbr::OriginalName("BattleResultStatus_WIN")] Win = 1,
     [pbr::OriginalName("BattleResultStatus_DEFEAT")] Defeat = 2,
+  }
+
+  public enum HeroBattleLostReason {
+    [pbr::OriginalName("HeroBattleLostReason_DEFEATED")] Defeated = 0,
+    [pbr::OriginalName("HeroBattleLostReason_TIME_IS_UP")] TimeIsUp = 1,
+    [pbr::OriginalName("HeroBattleLostReason_RETREATED")] Retreated = 2,
   }
 
   #endregion
@@ -550,6 +561,8 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BattleResultStatusDto(BattleResultStatusDto other) : this() {
       status_ = other.status_;
+      lostReason_ = other.lostReason_;
+      stars_ = other.stars_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -571,6 +584,30 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       }
     }
 
+    /// <summary>Field number for the "lost_reason" field.</summary>
+    public const int LostReasonFieldNumber = 2;
+    private global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleLostReason lostReason_ = global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleLostReason.Defeated;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleLostReason LostReason {
+      get { return lostReason_; }
+      set {
+        lostReason_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stars" field.</summary>
+    public const int StarsFieldNumber = 3;
+    private int stars_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Stars {
+      get { return stars_; }
+      set {
+        stars_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -587,6 +624,8 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
         return true;
       }
       if (Status != other.Status) return false;
+      if (LostReason != other.LostReason) return false;
+      if (Stars != other.Stars) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -595,6 +634,8 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
     public override int GetHashCode() {
       int hash = 1;
       if (Status != global::Ingweland.Fog.Inn.Models.Hoh.BattleResultStatus.Undefined) hash ^= Status.GetHashCode();
+      if (LostReason != global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleLostReason.Defeated) hash ^= LostReason.GetHashCode();
+      if (Stars != 0) hash ^= Stars.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -617,6 +658,14 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
         output.WriteRawTag(8);
         output.WriteEnum((int) Status);
       }
+      if (LostReason != global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleLostReason.Defeated) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) LostReason);
+      }
+      if (Stars != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Stars);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -631,6 +680,14 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
         output.WriteRawTag(8);
         output.WriteEnum((int) Status);
       }
+      if (LostReason != global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleLostReason.Defeated) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) LostReason);
+      }
+      if (Stars != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Stars);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -643,6 +700,12 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       int size = 0;
       if (Status != global::Ingweland.Fog.Inn.Models.Hoh.BattleResultStatus.Undefined) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (LostReason != global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleLostReason.Defeated) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LostReason);
+      }
+      if (Stars != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Stars);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -658,6 +721,12 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       }
       if (other.Status != global::Ingweland.Fog.Inn.Models.Hoh.BattleResultStatus.Undefined) {
         Status = other.Status;
+      }
+      if (other.LostReason != global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleLostReason.Defeated) {
+        LostReason = other.LostReason;
+      }
+      if (other.Stars != 0) {
+        Stars = other.Stars;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -682,6 +751,14 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
             Status = (global::Ingweland.Fog.Inn.Models.Hoh.BattleResultStatus) input.ReadEnum();
             break;
           }
+          case 16: {
+            LostReason = (global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleLostReason) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Stars = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -703,6 +780,14 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
             break;
           case 8: {
             Status = (global::Ingweland.Fog.Inn.Models.Hoh.BattleResultStatus) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            LostReason = (global::Ingweland.Fog.Inn.Models.Hoh.HeroBattleLostReason) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Stars = input.ReadInt32();
             break;
           }
         }

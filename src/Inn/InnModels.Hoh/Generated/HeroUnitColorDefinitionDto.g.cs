@@ -24,13 +24,17 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
     static HeroUnitColorDefinitionDtoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRoZXJvX3VuaXRfY29sb3JfZGVmaW5pdGlvbl9kdG8ucHJvdG8iKAoaSGVy",
-            "b1VuaXRDb2xvckRlZmluaXRpb25EVE8SCgoCaWQYASABKAlCH6oCHEluZ3dl",
-            "bGFuZC5Gb2cuSW5uLk1vZGVscy5Ib2hiBnByb3RvMw=="));
+            "CiRoZXJvX3VuaXRfY29sb3JfZGVmaW5pdGlvbl9kdG8ucHJvdG8aFWZpeGVk",
+            "X3BvaW50X2R0by5wcm90byK2AQoaSGVyb1VuaXRDb2xvckRlZmluaXRpb25E",
+            "VE8SCgoCaWQYASABKAkSRgoOZGFtYWdlX2ZhY3RvcnMYAyADKAsyLi5IZXJv",
+            "VW5pdENvbG9yRGVmaW5pdGlvbkRUTy5EYW1hZ2VGYWN0b3JzRW50cnkaRAoS",
+            "RGFtYWdlRmFjdG9yc0VudHJ5EgsKA2tleRgBIAEoCRIdCgV2YWx1ZRgCIAEo",
+            "CzIOLkZpeGVkUG9pbnREVE86AjgBQh+qAhxJbmd3ZWxhbmQuRm9nLklubi5N",
+            "b2RlbHMuSG9oYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDtoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitColorDefinitionDTO), global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitColorDefinitionDTO.Parser, new[]{ "Id" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitColorDefinitionDTO), global::Ingweland.Fog.Inn.Models.Hoh.HeroUnitColorDefinitionDTO.Parser, new[]{ "Id", "DamageFactors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -73,6 +77,7 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HeroUnitColorDefinitionDTO(HeroUnitColorDefinitionDTO other) : this() {
       id_ = other.id_;
+      damageFactors_ = other.damageFactors_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -94,6 +99,17 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       }
     }
 
+    /// <summary>Field number for the "damage_factors" field.</summary>
+    public const int DamageFactorsFieldNumber = 3;
+    private static readonly pbc::MapField<string, global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO>.Codec _map_damageFactors_codec
+        = new pbc::MapField<string, global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO.Parser), 26);
+    private readonly pbc::MapField<string, global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO> damageFactors_ = new pbc::MapField<string, global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Ingweland.Fog.Inn.Models.Hoh.FixedPointDTO> DamageFactors {
+      get { return damageFactors_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -110,6 +126,7 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
         return true;
       }
       if (Id != other.Id) return false;
+      if (!DamageFactors.Equals(other.DamageFactors)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,6 +135,7 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
+      hash ^= DamageFactors.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -140,6 +158,7 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      damageFactors_.WriteTo(output, _map_damageFactors_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -154,6 +173,7 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      damageFactors_.WriteTo(ref output, _map_damageFactors_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -167,6 +187,7 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
+      size += damageFactors_.CalculateSize(_map_damageFactors_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -182,6 +203,7 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
+      damageFactors_.MergeFrom(other.damageFactors_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -205,6 +227,10 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
             Id = input.ReadString();
             break;
           }
+          case 26: {
+            damageFactors_.AddEntriesFrom(input, _map_damageFactors_codec);
+            break;
+          }
         }
       }
     #endif
@@ -226,6 +252,10 @@ namespace Ingweland.Fog.Inn.Models.Hoh {
             break;
           case 10: {
             Id = input.ReadString();
+            break;
+          }
+          case 26: {
+            damageFactors_.AddEntriesFrom(ref input, _map_damageFactors_codec);
             break;
           }
         }

@@ -14,6 +14,7 @@ public class EndpointValidator
             {"game/battle/hero/stats", ["battleStats"]},
             {"game/battle/hero/complete-wave", ["battles"]},
             {"game/battle/hero/start", ["battles"]},
+            {"game/battle/replay", ["battles"]},
             {"game/woa/get-player-statistics", ["woa"]},
             {"game/startup", ["heroes"]},
         };

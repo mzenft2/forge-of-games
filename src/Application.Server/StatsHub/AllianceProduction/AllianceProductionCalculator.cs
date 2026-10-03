@@ -59,14 +59,14 @@ public static class AllianceProductionCalculator
     public static AllianceProductionValues Calculate(AllianceProductionInput input)
     {
         var foodCollectionFactor = CalculateFoodCollectionFactor(input.RuralFarmFoodPerHour, input.FoodPerHour);
-        var foodPerDay = Math.Round(input.FoodPerHour * foodCollectionFactor * 24);
-        var goodsAsFood = Math.Round(input.GoodsPerHour * input.GoodsToFoodRate * 24);
-        var coinsAsFood = Math.Round(input.CoinsPerHour * 24 * input.GoodsToFoodRate / COINS_PER_GOOD);
+        var foodPerDay = RoundHalfUp(input.FoodPerHour * foodCollectionFactor * 24);
+        var goodsAsFood = RoundHalfUp(input.GoodsPerHour * input.GoodsToFoodRate * 24);
+        var coinsAsFood = RoundHalfUp(input.CoinsPerHour * 24 * input.GoodsToFoodRate / COINS_PER_GOOD);
         var dailyValue = foodPerDay + goodsAsFood + coinsAsFood;
 
         var diamondExpansionArea = Math.Max(0, input.PremiumExpansionCount - FREE_PREMIUM_EXPANSIONS) *
             input.ExpansionArea;
-        var luxuriousAdvantageArea = (int) Math.Round(input.LuxuriousFarms * LUXURIOUS_FARM_ADVANTAGE_AREA +
+        var luxuriousAdvantageArea = (int) RoundHalfUp(input.LuxuriousFarms * LUXURIOUS_FARM_ADVANTAGE_AREA +
             input.LuxuriousHomes * LUXURIOUS_HOME_ADVANTAGE_AREA +
             input.LuxuriousCultureSites * LUXURIOUS_CULTURE_ADVANTAGE_AREA);
         var diamondShare = input.TotalArea > 0
@@ -80,11 +80,10 @@ public static class AllianceProductionCalculator
             GoodsAsFoodPerDay = goodsAsFood,
             CoinsAsFoodPerDay = coinsAsFood,
             DailyValue = dailyValue,
-            FurnaceLimitPercent = (int) Math.Round(input.GoodsPerHour * 24 * 100.0 / DAILY_GOODS_FURNACE_LIMIT,
-                MidpointRounding.AwayFromZero),
+            FurnaceLimitPercent = (int) RoundHalfUp(input.GoodsPerHour * 24 * 100.0 / DAILY_GOODS_FURNACE_LIMIT),
             DiamondExpansionArea = diamondExpansionArea,
             LuxuriousAdvantageArea = luxuriousAdvantageArea,
-            DailyValueWithoutDiamonds = Math.Round(dailyValue * (1 - diamondShare)),
+            DailyValueWithoutDiamonds = RoundHalfUp(dailyValue * (1 - diamondShare)),
         };
     }
 
@@ -97,7 +96,7 @@ public static class AllianceProductionCalculator
 
         var sorted = values.Order().ToList();
         var middle = sorted.Count / 2;
-        return sorted.Count % 2 == 1 ? sorted[middle] : Math.Round((sorted[middle - 1] + sorted[middle]) / 2);
+        return sorted.Count % 2 == 1 ? sorted[middle] : RoundHalfUp((sorted[middle - 1] + sorted[middle]) / 2);
     }
 
     public static int? DeviationFromMedianPercent(double value, double? median)
@@ -107,7 +106,7 @@ public static class AllianceProductionCalculator
             return null;
         }
 
-        return (int) Math.Round((value / median.Value - 1) * 100, MidpointRounding.AwayFromZero);
+        return (int) RoundHalfUp((value / median.Value - 1) * 100);
     }
 
     /// <summary>
@@ -146,6 +145,12 @@ public static class AllianceProductionCalculator
 
         var foodPerTile = farmFoodPerHour.Value / farmArea;
         return workshops.Average(x => foodPerTile * x.Area / x.GoodsPerHour!.Value);
+    }
+
+    // Rounds halves up, the same way the original table (JavaScript Math.round) does
+    private static double RoundHalfUp(double value)
+    {
+        return Math.Floor(value + 0.5);
     }
 
     private static double? GetFullyBuffedHourlyProduction(Building building, Func<string, bool> resourceFilter)

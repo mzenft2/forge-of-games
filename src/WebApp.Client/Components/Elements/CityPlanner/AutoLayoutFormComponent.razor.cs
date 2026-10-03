@@ -36,6 +36,8 @@ public partial class AutoLayoutFormComponent : ComponentBase, IDisposable
     private bool _isRunning;
     private double _progress;
     private ZenmarLayoutResult? _result;
+    private HohCity? _savedCity;
+    private ZenmarLayoutResult? _savedResult;
     private AutoLayoutSettings? _settings;
     private HohCity? _settingsCity;
     private string? _statusMessage;
@@ -251,10 +253,17 @@ public partial class AutoLayoutFormComponent : ComponentBase, IDisposable
             return;
         }
 
-        var name = string.Format(Loc[FogResource.CityPlanner_AutoLayout_NewCityName], SourceCity.Name);
-        var city = AutoLayoutService.CreateCity(SourceCity, _cityPlannerData, _catalog, _settings, _result, name);
-        await PersistenceService.SaveCity(city);
-        await OnCityCreated.InvokeAsync(city);
+        // The same result is saved once: clicking again (e.g. after "Cancel" in the save prompt) reopens it.
+        if (_savedCity == null || !ReferenceEquals(_savedResult, _result))
+        {
+            var name = string.Format(Loc[FogResource.CityPlanner_AutoLayout_NewCityName], SourceCity.Name);
+            _savedCity = AutoLayoutService.CreateCity(SourceCity, _cityPlannerData, _catalog, _settings, _result,
+                name);
+            await PersistenceService.SaveCity(_savedCity);
+            _savedResult = _result;
+        }
+
+        await OnCityCreated.InvokeAsync(_savedCity);
     }
 
     private async Task SetRunningAsync(bool isRunning)

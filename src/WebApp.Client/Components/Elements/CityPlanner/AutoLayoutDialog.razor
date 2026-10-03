@@ -2,8 +2,9 @@
 @using Ingweland.Fog.Models.Fog.Entities
 @using Microsoft.Extensions.Localization
 @inject IStringLocalizer<FogResource> Loc
+@inject IDialogService DialogService
 @* Auto layout from the City Planner toolbar. Settings start from the open city, which stays unchanged;
-   the dialog closes with the new city as its result. *@
+   the dialog closes with the new city (and whether to save the open city first) as its result. *@
 <MudDialog Style="padding: 24px">
     <TitleContent>
         <MudText Typo="Typo.h6">@Loc[FogResource.CityPlanner_AutoLayout_Button]</MudText>
@@ -14,7 +15,7 @@
         </MudText>
         <AutoLayoutFormComponent SourceCity="@City" OnCityCreated="OnCityCreated" RunningChanged="v => _isRunning = v"/>
         <MudText Typo="Typo.body2" Style="opacity: 0.7; margin-top: 12px">
-            @Loc[FogResource.CityPlanner_AutoLayout_Dialog_UnsavedChanges]
+            @Loc[FogResource.CityPlanner_AutoLayout_SavePrompt_Info]
         </MudText>
     </DialogContent>
     <DialogActions>
@@ -37,9 +38,24 @@
         MudDialog.Cancel();
     }
 
-    private void OnCityCreated(HohCity city)
+    private async Task OnCityCreated(HohCity city)
     {
-        MudDialog.Close(DialogResult.Ok(city));
+        // The planner does not track unsaved changes, so it always asks. Cancel keeps this window open;
+        // the new city is already saved.
+        var save = await DialogService.ShowMessageBox(
+            null,
+            string.Format(Loc[FogResource.CityPlanner_AutoLayout_SavePrompt_Message], City.Name),
+            Loc[FogResource.CityPlanner_AutoLayout_SavePrompt_Save],
+            Loc[FogResource.CityPlanner_AutoLayout_SavePrompt_DontSave],
+            Loc[FogResource.Common_Cancel]);
+        if (save == null)
+        {
+            return;
+        }
+
+        MudDialog.Close(DialogResult.Ok(new AutoLayoutDialogResult(city, save.Value)));
     }
+
+    public record AutoLayoutDialogResult(HohCity City, bool SaveOpenCity);
 
 }

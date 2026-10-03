@@ -458,9 +458,14 @@ public partial class CityPlannerComponent : ComponentBase, IDisposable
         var options = GetDefaultDialogOptions() with {CloseOnEscapeKey = false, BackdropClick = false};
         var dialog = await DialogService.ShowAsync<AutoLayoutDialog>(null, parameters, options);
         var result = await dialog.Result;
-        if (result is not {Canceled: false, Data: HohCity city})
+        if (result is not {Canceled: false, Data: AutoLayoutDialog.AutoLayoutDialogResult(var city, var saveOpenCity)})
         {
             return;
+        }
+
+        if (saveOpenCity)
+        {
+            await Save();
         }
 
         CityPlannerNavigationState.Data = new CityPlannerNavigationState.CityPlannerNavigationStateData {City = city};

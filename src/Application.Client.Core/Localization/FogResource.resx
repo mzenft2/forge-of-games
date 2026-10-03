@@ -1798,7 +1798,16 @@
     <data name="CityPlanner.AutoLayout.Dialog.Intro" xml:space="preserve">
         <value>The settings come from the city you have open. Change only what you want. The result is saved as a new city and opened here; the open city stays as it is.</value>
     </data>
-    <data name="CityPlanner.AutoLayout.Dialog.UnsavedChanges" xml:space="preserve">
-        <value>Unsaved changes in the open city are not kept when the new city opens. Save first if you want to keep them.</value>
+    <data name="CityPlanner.AutoLayout.SavePrompt.Info" xml:space="preserve">
+        <value>Before the new city opens, you will be asked whether to save the open city.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.SavePrompt.Message" xml:space="preserve">
+        <value>Save changes to {0} before opening the new city?</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.SavePrompt.Save" xml:space="preserve">
+        <value>Save and open</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.SavePrompt.DontSave" xml:space="preserve">
+        <value>Don't save</value>
     </data>
 </root>

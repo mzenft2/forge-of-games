@@ -5235,11 +5235,38 @@ namespace Ingweland.Fog.Application.Client.Core.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unsaved changes in the open city are not kept when the new c....
+        ///   Looks up a localized string similar to Before the new city opens, you will be asked whether to save t....
         /// </summary>
-        public static string CityPlanner_AutoLayout_Dialog_UnsavedChanges {
+        public static string CityPlanner_AutoLayout_SavePrompt_Info {
             get {
-                return ResourceManager.GetString("CityPlanner.AutoLayout.Dialog.UnsavedChanges", resourceCulture);
+                return ResourceManager.GetString("CityPlanner.AutoLayout.SavePrompt.Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save changes to {0} before opening the new city?.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_SavePrompt_Message {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.SavePrompt.Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save and open.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_SavePrompt_Save {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.SavePrompt.Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t save.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_SavePrompt_DontSave {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.SavePrompt.DontSave", resourceCulture);
             }
         }
     }

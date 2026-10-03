@@ -6,6 +6,7 @@ using Ingweland.Fog.Application.Client.Web.Caching.Interfaces;
 using Ingweland.Fog.Application.Client.Web.Calculators;
 using Ingweland.Fog.Application.Client.Web.Calculators.Interfaces;
 using Ingweland.Fog.Application.Client.Web.CityPlanner;
+using Ingweland.Fog.Application.Client.Web.CityPlanner.AutoLayout;
 using Ingweland.Fog.Application.Client.Web.CityPlanner.Abstractions;
 using Ingweland.Fog.Application.Client.Web.CityPlanner.Commands;
 using Ingweland.Fog.Application.Client.Web.CityPlanner.Inspirations;
@@ -123,6 +124,8 @@ public static class DependencyInjection
         services.AddScoped<ICityInspirationsUiService, CityInspirationsUiService>();
         services.AddScoped<IPlayerCitySnapshotViewModelFactory, PlayerCitySnapshotViewModelFactory>();
         services.AddScoped<ICityPlannerUiService, CityPlannerUiService>();
+        services.AddScoped<IZenmarCatalogFactory, ZenmarCatalogFactory>();
+        services.AddScoped<IAutoLayoutService, AutoLayoutService>();
         services.AddScoped<IHohCoreDataCache, HohCoreDataCache>();
         services.AddScoped<ICcMigrationManager, CcMigrationManager>();
         services.AddScoped<ITopHeroesUiService, TopHeroesUiService>();

@@ -201,3 +201,48 @@ window.Fog.Webapp.Google = {
         }
     },
 }
+
+window.Fog.Webapp.AutoLayout = {
+    _worker: null,
+    start: function (dotNetRef, input) {
+        this.cancel();
+        const worker = new Worker('scripts/zenmar/auto-layout-worker.js');
+        this._worker = worker;
+        worker.onmessage = ({data}) => {
+            if (worker !== this._worker) {
+                return;
+            }
+            if (data.type === 'progress') {
+                dotNetRef.invokeMethodAsync('OnAutoLayoutProgress', data.done, data.total, data.best);
+            } else if (data.type === 'result') {
+                this._worker = null;
+                worker.terminate();
+                dotNetRef.invokeMethodAsync('OnAutoLayoutFinished', data.best);
+            } else if (data.type === 'error') {
+                this._worker = null;
+                worker.terminate();
+                dotNetRef.invokeMethodAsync('OnAutoLayoutFailed', data.message);
+            }
+        };
+        worker.onerror = (e) => {
+            if (worker !== this._worker) {
+                return;
+            }
+            this._worker = null;
+            worker.terminate();
+            dotNetRef.invokeMethodAsync('OnAutoLayoutFailed', e && e.message ? e.message : 'worker error');
+        };
+        worker.postMessage({type: 'run', input: input});
+    },
+    stop: function () {
+        if (this._worker) {
+            this._worker.postMessage({type: 'stop'});
+        }
+    },
+    cancel: function () {
+        if (this._worker) {
+            this._worker.terminate();
+            this._worker = null;
+        }
+    }
+};

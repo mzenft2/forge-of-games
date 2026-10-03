@@ -165,6 +165,10 @@ tbody tr:nth-child(even) {
     height: 10px;
     border-radius: 2px;
     overflow: hidden;
+}
+
+/* Only the bar gets the empty-tile background: on .legend-item b it would outrank the .segment-* colours */
+.city-bar {
     background-color: var(--segment-empty);
 }
 

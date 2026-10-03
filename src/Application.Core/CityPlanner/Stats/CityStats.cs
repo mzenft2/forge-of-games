@@ -34,6 +34,11 @@ public class CityStats
     public IDictionary<string, ConsolidatedTimedProductionValues> Products { get; } =
         new Dictionary<string, ConsolidatedTimedProductionValues>();
 
+    public IDictionary<BuildingGroup, IDictionary<string, ConsolidatedTimedProductionValues>> ProductsByGroup
+    {
+        get;
+    } = new Dictionary<BuildingGroup, IDictionary<string, ConsolidatedTimedProductionValues>>();
+
     public IReadOnlyDictionary<WorkerType, int> ProvidedWorkers { get; set; } = new Dictionary<WorkerType, int>();
 
     public IReadOnlyDictionary<WorkerType, int> RequiredWorkers { get; set; } = new Dictionary<WorkerType, int>();

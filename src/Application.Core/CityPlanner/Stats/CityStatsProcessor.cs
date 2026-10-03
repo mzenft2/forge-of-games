@@ -104,6 +104,22 @@ public static class CityStatsProcessor
                                 productTuple.Default += productStatsItem.DefaultProduction.BuffedValue;
                                 productTuple.OneHour += productStatsItem.OneHourProduction.BuffedValue;
                                 productTuple.OneDay += productStatsItem.OneDayProduction.BuffedValue;
+
+                                if (!stats.ProductsByGroup.TryGetValue(cme.BuildingGroup, out var groupProducts))
+                                {
+                                    groupProducts = new Dictionary<string, ConsolidatedTimedProductionValues>();
+                                    stats.ProductsByGroup.Add(cme.BuildingGroup, groupProducts);
+                                }
+
+                                if (!groupProducts.TryGetValue(productStatsItem.ResourceId, out var groupProductTuple))
+                                {
+                                    groupProductTuple = new ConsolidatedTimedProductionValues();
+                                    groupProducts.Add(productStatsItem.ResourceId, groupProductTuple);
+                                }
+
+                                groupProductTuple.Default += productStatsItem.DefaultProduction.BuffedValue;
+                                groupProductTuple.OneHour += productStatsItem.OneHourProduction.BuffedValue;
+                                groupProductTuple.OneDay += productStatsItem.OneDayProduction.BuffedValue;
                             }
                         }
 

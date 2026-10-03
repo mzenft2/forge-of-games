@@ -73,6 +73,7 @@ public static class DependencyInjection
         services.AddScoped<IRelicService, RelicService>();
         services.AddScoped<IAllianceAthRankingDtoFactory, AllianceAthRankingDtoFactory>();
         services.AddScoped<IAllianceWoaRankingDtoFactory, AllianceWoaRankingDtoFactory>();
+        services.AddScoped<IAllianceProductionDtoFactory, AllianceProductionDtoFactory>();
         services.AddScoped<IFogRankingService, FogRankingService>();
         services.AddScoped<IRankingUpdateOrchestrator, RankingUpdateOrchestrator>();
         services.AddScoped<IFogCommonService, FogCommonService>();

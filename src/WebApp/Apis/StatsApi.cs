@@ -37,6 +37,7 @@ public static class StatsApi
         api.MapGet(FogUrlBuilder.ApiRoutes.ALLIANCE_TEMPLATE, GetAllianceAsync);
         api.MapGet(FogUrlBuilder.ApiRoutes.ALLIANCE_ATH_RANKINGS_TEMPLATE, GetAllianceAthRankingsAsync);
         api.MapGet(FogUrlBuilder.ApiRoutes.ALLIANCE_WOA_RANKINGS_TEMPLATE, GetAllianceWoaRankingsAsync);
+        api.MapGet(FogUrlBuilder.ApiRoutes.ALLIANCE_PRODUCTION_TEMPLATE, GetAllianceProductionAsync);
         api.MapGet(FogUrlBuilder.ApiRoutes.ALLIANCE_RANKINGS_TEMPLATE, GetAllianceRankingsAsync);
         api.MapGet(FogUrlBuilder.ApiRoutes.ALLIANCES_ATH_RANKINGS_TEMPLATE, GetAlliancesAthRankingsAsync);
         api.MapGet(FogUrlBuilder.ApiRoutes.TOP_ALLIANCES_TEMPLATE, GetTopAlliancesAsync);
@@ -257,6 +258,19 @@ public static class StatsApi
             CancellationToken ct = default)
     {
         var result = await services.StatsHubService.GetAllianceAthRankingsAsync(allianceId, ct);
+
+        return TypedResults.Ok(result);
+    }
+
+    private static async Task<Results<Ok<AllianceProductionDto>, NotFound>>
+        GetAllianceProductionAsync([AsParameters] StatsServices services, HttpContext context, int allianceId,
+            CancellationToken ct = default)
+    {
+        var result = await services.StatsHubService.GetAllianceProductionAsync(allianceId, ct);
+        if (result == null)
+        {
+            return TypedResults.NotFound();
+        }
 
         return TypedResults.Ok(result);
     }

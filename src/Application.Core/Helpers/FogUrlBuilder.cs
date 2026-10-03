@@ -61,6 +61,8 @@ public static class FogUrlBuilder
         public const string TOP_ALLIANCES_TEMPLATE = ALLIANCES_TEMPLATE + "/top";
         public const string ALLIANCE_WOA_RANKINGS_TEMPLATE = ALLIANCE_TEMPLATE + "/woaRankings";
         public const string ALLIANCE_WOA_RANKINGS_TEMPLATE_REFIT = ALLIANCE_TEMPLATE_REFIT + "/woaRankings";
+        public const string ALLIANCE_PRODUCTION_TEMPLATE = ALLIANCE_TEMPLATE + "/production";
+        public const string ALLIANCE_PRODUCTION_TEMPLATE_REFIT = ALLIANCE_TEMPLATE_REFIT + "/production";
         public const string ALLIANCES_WOA_RANKINGS_TEMPLATE = ALLIANCES_TEMPLATE + "/woaRankings";
 
         public const string WOA_DIVISION_TEMPLATE = "/" + BASE_STATS_PATH + "/woa/divisions/{divisionId:int}";

@@ -4765,5 +4765,419 @@ namespace Ingweland.Fog.Application.Client.Core.Localization {
                 return ResourceManager.GetString("Wonders.PageTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Auto layout.
+        /// </summary>
+        public static string CityPlanner_AutoLayout {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Auto Layout | City Planner | Forge of Games.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_PageTitle {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make more of every tile..
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Title {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a capital city from the City Planner. The planner kee....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Intro {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City to start from.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_SourceCity {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.SourceCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create or import a capital city in the City Planner first..
+        /// </summary>
+        public static string CityPlanner_AutoLayout_NoCities {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.NoCities", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City age.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_CityAge {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.CityAge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your land.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Land {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Land", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open expansions taken from the selected city: {0}.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Land_Summary {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Land.Summary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buildings to keep.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Keep {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Keep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your fountain level.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_FountainLevel {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.FountainLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your tower level.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_TowerLevel {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.TowerLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owned luxurious buildings.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_OwnedPremium {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.OwnedPremium", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Farms I already own.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_OwnedFarms {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.OwnedFarms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Standard and luxurious buildings use the age's highest level....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Levels_Hint {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Levels.Hint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collection schedule and needs.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Schedule {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Schedule", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Daytime collection interval.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_DayInterval {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.DayInterval", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overnight break.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_NightBreak {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.NightBreak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Double storage from subscription.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_DoubleStorage {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.DoubleStorage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Workshops for development.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Workshops {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Workshops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a count for each workshop; counts may differ. Actual ....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Workshops_Hint {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Workshops.Hint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production for the furnace.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Furnace {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Furnace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Furnace limit (goods a day).
+        /// </summary>
+        public static string CityPlanner_AutoLayout_FurnaceLimit {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.FurnaceLimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How many old workshops do you want?.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_OldWorkshops {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.OldWorkshops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Also compare production up to the furnace limit.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_FurnaceVariant {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.FurnaceVariant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Require full barracks culture.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_BarracksMin {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.BarracksMin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total search time.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_SearchTime {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.SearchTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The planner automatically tries different layouts and keeps ....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_SearchTime_Hint {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.SearchTime.Hint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plan my city.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Run {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Run", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stop and keep result.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Stop {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Stop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Searching for a better result. You can stop and keep the cit....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Status_Searching {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Status.Searching", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The search period has finished..
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Status_Finished {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Status.Finished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No valid layout was found. Try a longer search or change set....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Status_NotFound {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Status.NotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A browser error interrupted calculation..
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Status_BrowserError {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Status.BrowserError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Layout meeting placement rules.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Result_Valid {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Result.Valid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Draft layout: further improvement needed.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Result_Draft {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Result.Draft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total food-equivalent value / day.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Result_TotalValue {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Result.TotalValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spare workers.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Result_WorkersAvailable {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Result.WorkersAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Free tiles.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Result_FreeTiles {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Result.FreeTiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Barracks do not meet the required culture..
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Result_BarracksBelow {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Result.BarracksBelow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This is the best layout found for your requirements, not a g....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Result_Scope {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Result.Scope", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save as new city and open.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_SaveAndOpen {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.SaveAndOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} (auto layout).
+        /// </summary>
+        public static string CityPlanner_AutoLayout_NewCityName {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.NewCityName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Layout engine: Zenmar Strategy by Marek Zenft (AGPL-3.0).
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Attribution {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Attribution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Automatically lay out your Heroes of History capital: farms,....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Meta_Description {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Meta.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heroes of History, HoH, city planner, auto layout, city layo....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Meta_Keywords {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Meta.Keywords", resourceCulture);
+            }
+        }
     }
 }

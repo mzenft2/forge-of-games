@@ -118,6 +118,7 @@ public static class FogUrlBuilder
         public const string BASE_CITY_PLANNER_PATH = "/city-planner";
         public const string CITY_PLANNER_APP_PATH = BASE_CITY_PLANNER_PATH + "/app";
         public const string CITY_PLANNER_INSPIRATIONS_PATH = BASE_CITY_PLANNER_PATH + "/inspirations";
+        public const string CITY_PLANNER_AUTO_LAYOUT_PATH = BASE_CITY_PLANNER_PATH + "/auto-layout";
         public const string CITY_STRATEGIES_DASHBOARD_PATH = BASE_CITY_PLANNER_PATH + "/strategies";
         public const string CITY_STRATEGY_BUILDER_APP_PATH = CITY_STRATEGIES_DASHBOARD_PATH + "/app";
         public const string CITY_STRATEGY_VIEWER_PATH = CITY_STRATEGIES_DASHBOARD_PATH + "/viewer";

@@ -1642,4 +1642,142 @@
     <data name="Common.Premium" xml:space="preserve">
         <value>Premium</value>
     </data>
+    <data name="CityPlanner.AutoLayout" xml:space="preserve">
+        <value>Auto layout</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.PageTitle" xml:space="preserve">
+        <value>Auto Layout | City Planner | Forge of Games</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Title" xml:space="preserve">
+        <value>Make more of every tile.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Intro" xml:space="preserve">
+        <value>Choose a capital city from the City Planner. The planner keeps your land and buildings, selects farms and supporting buildings, and saves the result as a new city.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.SourceCity" xml:space="preserve">
+        <value>City to start from</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.NoCities" xml:space="preserve">
+        <value>Create or import a capital city in the City Planner first.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.CityAge" xml:space="preserve">
+        <value>City age</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Land" xml:space="preserve">
+        <value>Your land</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Land.Summary" xml:space="preserve">
+        <value>Open expansions taken from the selected city: {0}</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Keep" xml:space="preserve">
+        <value>Buildings to keep</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.FountainLevel" xml:space="preserve">
+        <value>Your fountain level</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.TowerLevel" xml:space="preserve">
+        <value>Your tower level</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.OwnedPremium" xml:space="preserve">
+        <value>Owned luxurious buildings</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.OwnedFarms" xml:space="preserve">
+        <value>Farms I already own</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Levels.Hint" xml:space="preserve">
+        <value>Standard and luxurious buildings use the age's highest level. The fountain and tower use your level.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Schedule" xml:space="preserve">
+        <value>Collection schedule and needs</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.DayInterval" xml:space="preserve">
+        <value>Daytime collection interval</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.NightBreak" xml:space="preserve">
+        <value>Overnight break</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.DoubleStorage" xml:space="preserve">
+        <value>Double storage from subscription</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Workshops" xml:space="preserve">
+        <value>Workshops for development</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Workshops.Hint" xml:space="preserve">
+        <value>Choose a count for each workshop; counts may differ. Actual output depends on culture and collection times.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Furnace" xml:space="preserve">
+        <value>Production for the furnace</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.FurnaceLimit" xml:space="preserve">
+        <value>Furnace limit (goods a day)</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.OldWorkshops" xml:space="preserve">
+        <value>How many old workshops do you want?</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.FurnaceVariant" xml:space="preserve">
+        <value>Also compare production up to the furnace limit</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.BarracksMin" xml:space="preserve">
+        <value>Require full barracks culture</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.SearchTime" xml:space="preserve">
+        <value>Total search time</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.SearchTime.Hint" xml:space="preserve">
+        <value>The planner automatically tries different layouts and keeps the best result found. You can stop early and keep the result. Finishing a running attempt may take a little longer.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Run" xml:space="preserve">
+        <value>Plan my city</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Stop" xml:space="preserve">
+        <value>Stop and keep result</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Status.Searching" xml:space="preserve">
+        <value>Searching for a better result. You can stop and keep the city found.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Status.Finished" xml:space="preserve">
+        <value>The search period has finished.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Status.NotFound" xml:space="preserve">
+        <value>No valid layout was found. Try a longer search or change settings.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Status.BrowserError" xml:space="preserve">
+        <value>A browser error interrupted calculation.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Result.Valid" xml:space="preserve">
+        <value>Layout meeting placement rules</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Result.Draft" xml:space="preserve">
+        <value>Draft layout: further improvement needed</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Result.TotalValue" xml:space="preserve">
+        <value>Total food-equivalent value / day</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Result.WorkersAvailable" xml:space="preserve">
+        <value>Spare workers</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Result.FreeTiles" xml:space="preserve">
+        <value>Free tiles</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Result.BarracksBelow" xml:space="preserve">
+        <value>Barracks do not meet the required culture.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Result.Scope" xml:space="preserve">
+        <value>This is the best layout found for your requirements, not a guarantee of optimality. Calculations exclude temporary bonuses and rebuilding costs. Everything runs in your browser.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.SaveAndOpen" xml:space="preserve">
+        <value>Save as new city and open</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.NewCityName" xml:space="preserve">
+        <value>{0} (auto layout)</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Attribution" xml:space="preserve">
+        <value>Layout engine: Zenmar Strategy by Marek Zenft (AGPL-3.0)</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Meta.Description" xml:space="preserve">
+        <value>Automatically lay out your Heroes of History capital: farms, homes, culture sites and workshops arranged for the most production on your land.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Meta.Keywords" xml:space="preserve">
+        <value>Heroes of History, HoH, city planner, auto layout, city layout, optimizer, Forge of Games</value>
+    </data>
 </root>

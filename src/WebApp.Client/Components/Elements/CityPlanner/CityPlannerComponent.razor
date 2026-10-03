@@ -1,3 +1,4 @@
+@using Ingweland.Fog.Application.Client.Core.Localization
 @using Ingweland.Fog.Models.Hoh.Enums
 @using Ingweland.Fog.WebApp.Client.Components.Elements.CityPlanner.Stats
 @using Position = MudBlazor.Position
@@ -52,6 +53,13 @@
             <MudToggleIconButton Icon="material-symbols-outlined/open_run" ToggledColor="Color.Warning"
                                  @bind-Toggled="_extendedExpansionModeIsActive" Color="Color.Inherit"/>
             <MudIconButton Icon="@Icons.Material.Outlined.Image" OnClick="@OnSaveImage" Color="Color.Inherit"/>
+            @if (CityPlanner.CityMapState.InGameCityId == CityId.Capital)
+            {
+                <MudTooltip Text="@Loc[FogResource.CityPlanner_AutoLayout_Button]">
+                    <MudIconButton Icon="@Icons.Material.Outlined.AutoAwesomeMosaic" OnClick="@OpenAutoLayout"
+                                   Color="Color.Inherit"/>
+                </MudTooltip>
+            }
             <MudSpacer/>
             <MudToggleIconButton Icon="material-symbols-outlined/right_panel_open"
                                  Color="Color.Inherit" Toggled="@_rightPanelIsVisible"

@@ -1,0 +1,45 @@
+@using Ingweland.Fog.Application.Client.Core.Localization
+@using Ingweland.Fog.Models.Fog.Entities
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<FogResource> Loc
+@* Auto layout from the City Planner toolbar. Settings start from the open city, which stays unchanged;
+   the dialog closes with the new city as its result. *@
+<MudDialog Style="padding: 24px">
+    <TitleContent>
+        <MudText Typo="Typo.h6">@Loc[FogResource.CityPlanner_AutoLayout_Button]</MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudText Typo="Typo.body2" Style="opacity: 0.7; margin-bottom: 12px">
+            @Loc[FogResource.CityPlanner_AutoLayout_Dialog_Intro]
+        </MudText>
+        <AutoLayoutFormComponent SourceCity="@City" OnCityCreated="OnCityCreated" RunningChanged="v => _isRunning = v"/>
+        <MudText Typo="Typo.body2" Style="opacity: 0.7; margin-top: 12px">
+            @Loc[FogResource.CityPlanner_AutoLayout_Dialog_UnsavedChanges]
+        </MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Close" Disabled="@_isRunning">@Loc[FogResource.Common_Close]</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    private bool _isRunning;
+
+    [Parameter]
+    [EditorRequired]
+    public HohCity City { get; set; }
+
+    [CascadingParameter]
+    private IMudDialogInstance MudDialog { get; set; }
+
+    private void Close()
+    {
+        MudDialog.Cancel();
+    }
+
+    private void OnCityCreated(HohCity city)
+    {
+        MudDialog.Close(DialogResult.Ok(city));
+    }
+
+}

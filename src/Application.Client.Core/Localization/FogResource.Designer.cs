@@ -5215,5 +5215,32 @@ namespace Ingweland.Fog.Application.Client.Core.Localization {
                 return ResourceManager.GetString("CityPlanner.AutoLayout.Support.Button", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Auto layout.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Button {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The settings come from the city you have open. Change only w....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Dialog_Intro {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Dialog.Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unsaved changes in the open city are not kept when the new c....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Dialog_UnsavedChanges {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Dialog.UnsavedChanges", resourceCulture);
+            }
+        }
     }
 }

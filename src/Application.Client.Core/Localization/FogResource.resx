@@ -1792,4 +1792,13 @@
     <data name="CityPlanner.AutoLayout.Support.Button" xml:space="preserve">
         <value>Support on Ko-fi</value>
     </data>
+    <data name="CityPlanner.AutoLayout.Button" xml:space="preserve">
+        <value>Auto layout</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Dialog.Intro" xml:space="preserve">
+        <value>The settings come from the city you have open. Change only what you want. The result is saved as a new city and opened here; the open city stays as it is.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Dialog.UnsavedChanges" xml:space="preserve">
+        <value>Unsaved changes in the open city are not kept when the new city opens. Save first if you want to keep them.</value>
+    </data>
 </root>

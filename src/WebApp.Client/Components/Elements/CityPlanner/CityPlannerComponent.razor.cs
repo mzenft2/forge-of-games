@@ -9,6 +9,7 @@ using Ingweland.Fog.Application.Client.Web.Models;
 using Ingweland.Fog.Application.Client.Web.Services.Abstractions;
 using Ingweland.Fog.Application.Core.Constants;
 using Ingweland.Fog.Application.Core.Helpers;
+using Ingweland.Fog.Models.Fog.Entities;
 using Ingweland.Fog.Models.Hoh.Enums;
 using Ingweland.Fog.Shared.Constants;
 using Microsoft.AspNetCore.Components;
@@ -449,6 +450,23 @@ public partial class CityPlannerComponent : ComponentBase, IDisposable
             _ = await DialogService.ShowMessageBox("Error generating image",
                 string.Join("; ", image.Reasons.Select(r => r.Message)), Loc[FogResource.Common_Ok]);
         }
+    }
+
+    private async Task OpenAutoLayout()
+    {
+        var parameters = new DialogParameters<AutoLayoutDialog> {{d => d.City, CityPlanner.GetCity()}};
+        var options = GetDefaultDialogOptions() with {CloseOnEscapeKey = false, BackdropClick = false};
+        var dialog = await DialogService.ShowAsync<AutoLayoutDialog>(null, parameters, options);
+        var result = await dialog.Result;
+        if (result is not {Canceled: false, Data: HohCity city})
+        {
+            return;
+        }
+
+        CityPlannerNavigationState.Data = new CityPlannerNavigationState.CityPlannerNavigationStateData {City = city};
+        await CityPlanner.InitializeAsync(city);
+        _fitOnPaint = true;
+        _skComponent?.SkCanvasView!.Invalidate();
     }
 
     private static DialogOptions GetDefaultDialogOptions()

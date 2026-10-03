@@ -7,59 +7,9 @@
     gap: 12px;
 }
 
-fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.section {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
 .hint {
     opacity: 0.7;
     font-size: 0.85rem;
-}
-
-.land {
-    margin-top: 8px;
-}
-
-.land-grid {
-    display: grid;
-    grid-template-columns: repeat(10, 18px);
-    gap: 2px;
-    margin-top: 4px;
-}
-
-.land-cell {
-    width: 18px;
-    height: 18px;
-    background-color: var(--mud-palette-action-disabled-background);
-    border-radius: 2px;
-}
-
-.land-cell.open {
-    background-color: var(--mud-palette-success);
-}
-
-.actions {
-    display: flex;
-    gap: 8px;
-}
-
-.result table td {
-    padding: 2px 12px 2px 0;
-}
-
-.status {
-    font-weight: 500;
 }
 
 .attribution {

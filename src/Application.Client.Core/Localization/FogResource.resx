@@ -1642,4 +1642,216 @@
     <data name="Common.Premium" xml:space="preserve">
         <value>Premium</value>
     </data>
+    <data name="StatsHub.AllianceProduction.Title" xml:space="preserve">
+        <value>Alliance Production</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Intro" xml:space="preserve">
+        <value>What each member's city produces in a day, counted in one currency (food) and compared within the same age. A well-played city has no empty tiles. Hover over a number to see how it was calculated.</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.AgeHeader" xml:space="preserve">
+        <value>{0} players · age median {1}M per day · 1 good = {2} food</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.AgeHeader.NoMedian" xml:space="preserve">
+        <value>{0} players · 1 good = {1} food</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tab.All" xml:space="preserve">
+        <value>All</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tab.Production" xml:space="preserve">
+        <value>Production</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tab.CityBuild" xml:space="preserve">
+        <value>City build</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.ColumnPicker.Label" xml:space="preserve">
+        <value>Show columns:</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.ColumnPicker.Deviation" xml:space="preserve">
+        <value>± vs age median</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.SortHint" xml:space="preserve">
+        <value>Click to sort</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.Player" xml:space="preserve">
+        <value>Player</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.DailyValue" xml:space="preserve">
+        <value>Daily value</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.Deviation" xml:space="preserve">
+        <value>±</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.City" xml:space="preserve">
+        <value>City</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.FoodPerHour" xml:space="preserve">
+        <value>Food / h</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.FoodPerDay" xml:space="preserve">
+        <value>Food collected / day</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.GoodsPerHour" xml:space="preserve">
+        <value>Goods / h</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.GoodsAsFood" xml:space="preserve">
+        <value>Goods as food</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.FurnaceLimit" xml:space="preserve">
+        <value>Furnace limit</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.CoinsPerHour" xml:space="preserve">
+        <value>Coins / h</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.CoinsAsFood" xml:space="preserve">
+        <value>Coins as food</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.Farms" xml:space="preserve">
+        <value>Farms</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.Workshops" xml:space="preserve">
+        <value>Workshops</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.Workers" xml:space="preserve">
+        <value>Workers</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.CultureUsage" xml:space="preserve">
+        <value>Culture ×</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.EmptyTiles" xml:space="preserve">
+        <value>Empty</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.PremiumExpansions" xml:space="preserve">
+        <value>Premium expansions</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.WithoutDiamonds" xml:space="preserve">
+        <value>Without diamonds</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Col.SnapshotDate" xml:space="preserve">
+        <value>City snapshot</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.DailyValue" xml:space="preserve">
+        <value>food {0}M
++ goods {1}M
++ coins {2}M
+= {3}M per day</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.Deviation" xml:space="preserve">
+        <value>age median {0}M</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.City" xml:space="preserve">
+        <value>{0} of {1} tiles occupied</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.FoodPerHour" xml:space="preserve">
+        <value>what the game shows — it assumes collecting around the clock
+realistically you collect {0}M a day, not {1}M</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.FoodPerDay" xml:space="preserve">
+        <value>{0}/h × {1} × 24 h = {2}
+the {1} factor comes from your farms: rural ones are collected ~18 h a day, the rest ~22.5 h
+about {3} h of collecting a day</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.GoodsAsFood" xml:space="preserve">
+        <value>{0}/h × {1} food per good × 24 h = {2}
+rate {1} = the food a rural farm of this age would make on the tiles a workshop takes</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.FurnaceLimit" xml:space="preserve">
+        <value>{0}/h × 24 h = {1} goods a day
+daily limit for turning goods into sparks: {2}
+{1} ÷ {2} = {3}%</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.InGameValue" xml:space="preserve">
+        <value>what the game shows</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.CoinsAsFood" xml:space="preserve">
+        <value>{0}/h × 24 h = {1} coins
+÷ 671 coins per good = {2} goods
+× {3} food = {4}
+(671 from spark rates: 84,000 coins = 170 sparks, 70 goods = 95 sparks)</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.Farms" xml:space="preserve">
+        <value>{0} farms take {1} tiles
+{2} tiles each on average
+{3} food/h, i.e. {4} per tile</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.Workshops" xml:space="preserve">
+        <value>{0} from the current age
+{1} from up to three ages back
+{2} older
+{3} workshops in total</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.Workers.Missing" xml:space="preserve">
+        <value>the city has {0} workers
+{1} missing — those jobs are empty, so buildings stand idle</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.Workers.Free" xml:space="preserve">
+        <value>the city has {0} workers
+{1} free — room for more buildings</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.CultureUsage" xml:space="preserve">
+        <value>culture usage ratio {0}
+the same culture serves this many buildings
+8 is excellent, 4 means much of it is wasted</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.EmptyTiles" xml:space="preserve">
+        <value>{0} tiles of capacity − {1} occupied = {2} free
+room for {3} rural farms</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.EmptyTiles.TooSmall" xml:space="preserve">
+        <value>{0} tiles of capacity − {1} occupied = {2} free
+a farm needs 12 tiles</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.PremiumExpansions" xml:space="preserve">
+        <value>{0} purchases of {1} tiles, {2} diamonds in total
+next expansion: {3} diamonds</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.PremiumExpansions.None" xml:space="preserve">
+        <value>nothing bought
+next expansion: {0} diamonds</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.WithoutDiamonds.Expansions" xml:space="preserve">
+        <value>{0} tiles from expansions above the free threshold ({1} purchases, the first {2} not counted)</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.WithoutDiamonds.Luxurious" xml:space="preserve">
+        <value>{0} tiles of luxurious advantage: {1} farms, {2} homes, {3} culture sites</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.WithoutDiamonds.Share" xml:space="preserve">
+        <value>{0} of {1} tiles in total, i.e. {2}% of the city
+{3}M × {4} = {5}M</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.WithoutDiamonds.None" xml:space="preserve">
+        <value>nothing above the free threshold — the whole value comes from play</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Tooltip.SnapshotDate" xml:space="preserve">
+        <value>when this city was last uploaded to Forge of Games</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Coverage" xml:space="preserve">
+        <value>{0} of {1} members have a city snapshot.</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.MissingMembers" xml:space="preserve">
+        <value>No city snapshot: {0}</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Legend.Administration" xml:space="preserve">
+        <value>Administration</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Legend.Barracks" xml:space="preserve">
+        <value>Barracks</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Legend.CurrentWorkshops" xml:space="preserve">
+        <value>Current workshops</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Legend.Farms" xml:space="preserve">
+        <value>Farms</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Legend.OldWorkshops" xml:space="preserve">
+        <value>Old workshops</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Legend.Homes" xml:space="preserve">
+        <value>Homes</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Legend.Culture" xml:space="preserve">
+        <value>Culture</value>
+    </data>
+    <data name="StatsHub.AllianceProduction.Legend.EmptyTile" xml:space="preserve">
+        <value>Empty tile</value>
+    </data>
 </root>

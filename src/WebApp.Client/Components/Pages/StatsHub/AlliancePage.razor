@@ -134,6 +134,16 @@
             }
         </ExpandableContainer>
 
+        <ExpandableContainer Title="@Loc[FogResource.StatsHub_AllianceProduction_Title]"
+                             IsLoading="@_productionIsLoading"
+                             IsEmpty="@(_production is {MembersWithCityCount: 0})"
+                             ExpandedChanged="@ToggleProductionContainer">
+            @if (_production != null)
+            {
+                <AllianceProductionComponent Production="@_production"/>
+            }
+        </ExpandableContainer>
+
         <div class="fog-container section-container">
             <span class="section-title">@Loc[FogResource.StatsHub_Player_Names]</span>
             <MudTimeline TimelinePosition="TimelinePosition.Start">

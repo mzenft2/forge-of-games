@@ -31,6 +31,7 @@ public class StatsHubUiService : UiServiceBase, IStatsHubUiService
 
     private readonly Lazy<Task<IReadOnlyDictionary<string, AgeDto>>> _ages;
     private readonly IAllianceAthRankingViewModelFactory _allianceAthRankingViewModelFactory;
+    private readonly IAllianceProductionViewModelFactory _allianceProductionViewModelFactory;
     private readonly IAllianceWoaRankingViewModelFactory _allianceWoaRankingViewModelFactory;
     private readonly IBattleService _battleService;
     private readonly IBattleViewModelFactory _battleViewModelFactory;
@@ -58,6 +59,7 @@ public class StatsHubUiService : UiServiceBase, IStatsHubUiService
         IHohCoreDataCache coreDataCache,
         IMapper mapper,
         IAllianceAthRankingViewModelFactory allianceAthRankingViewModelFactory,
+        IAllianceProductionViewModelFactory allianceProductionViewModelFactory,
         IAllianceWoaRankingViewModelFactory allianceWoaRankingViewModelFactory,
         ICommonUiService commonUiService,
         IPlayerCityPropertiesViewModelFactory cityPropertiesViewModelFactory,
@@ -87,6 +89,7 @@ public class StatsHubUiService : UiServiceBase, IStatsHubUiService
         _woaPlayerStatsViewModelFactory = woaPlayerStatsViewModelFactory;
         _woaDivisionViewModelFactory = woaDivisionViewModelFactory;
         _heroProfileUiService = heroProfileUiService;
+        _allianceProductionViewModelFactory = allianceProductionViewModelFactory;
 
         _ages = new Lazy<Task<IReadOnlyDictionary<string, AgeDto>>>(GetAgesAsync);
     }
@@ -331,6 +334,14 @@ public class StatsHubUiService : UiServiceBase, IStatsHubUiService
             null);
 
         return result != null ? _cityPropertiesViewModelFactory.Create(result) : null;
+    }
+
+    public async Task<AllianceProductionViewModel?> GetAllianceProductionAsync(int allianceId,
+        CancellationToken ct = default)
+    {
+        var result = await ExecuteSafeAsync(() => _statsHubService.GetAllianceProductionAsync(allianceId, ct), null);
+
+        return result != null ? _allianceProductionViewModelFactory.Create(result, await _ages.Value) : null;
     }
 
     public async Task<IReadOnlyCollection<AllianceWoaRankingViewModel>> GetAllianceWoaRankingsAsync(int allianceId,

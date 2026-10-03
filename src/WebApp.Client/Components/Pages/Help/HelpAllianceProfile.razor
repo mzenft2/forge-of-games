@@ -50,4 +50,58 @@
             detailed player information can be explored.
         </p>
     </div>
+
+    <div class="help-step">
+        <h5>Alliance Production</h5>
+        <p>
+            A collapsible table that compares the cities of all current members, grouped by age. Each row shows what
+            the city really produces in a day, how it is built, and where it loses output. Use the
+            <strong>All</strong>, <strong>Production</strong> and <strong>City build</strong> tabs or the
+            column checkboxes to choose what you see; your choice is remembered in this browser. Click a column header
+            to sort, and hover over a number to see how it was calculated.
+        </p>
+        <p>
+            <strong>Daily value</strong> adds food, goods and coins into one number, counted in food:
+        </p>
+        <ul>
+            <li><strong>Food</strong> — what you can realistically collect, not what the game shows. Rural farms
+                are counted at about 18 hours of collecting a day (they are ready every 3 hours, and you sleep);
+                domestic, luxurious and other food buildings at 22.5 hours.</li>
+            <li><strong>Goods</strong> — valued at the food a rural farm of the same age would make on the tiles a
+                workshop takes, divided by the goods that workshop makes. Both buildings are taken at the highest
+                level of the age and with full culture bonus, straight from the game data.</li>
+            <li><strong>Coins</strong> — through sparks: 84,000 coins = 170 sparks and 70 goods = 95 sparks,
+                so 1 good ≈ 671 coins. Coins then follow the goods rate into food.</li>
+        </ul>
+        <p>
+            Compare players only within the same age: the goods rate depends on the age. The
+            <strong>±</strong> column shows how far a city is above or below the median of its age among the
+            alliance members (shown when the age has at least 3 members).
+        </p>
+        <p>
+            <strong>Furnace limit</strong> shows how much of the daily limit for turning goods into sparks (7,000
+            goods) the city's workshops could fill.
+        </p>
+        <p>
+            <strong>Without diamonds</strong> removes the advantage bought with diamonds. The first 7 premium
+            expansions are not counted, since the diamonds for them can be earned in the game. Each expansion
+            above that removes its tiles. Luxurious buildings count only for what they add over a regular
+            building: a farm about 12 tiles, a home about 4, a culture site 3. The daily value is then reduced
+            by that share of the city.
+        </p>
+        <p>
+            <strong>Empty</strong> tiles produce nothing; 12 empty tiles are one missing rural farm.
+            <strong>Workers</strong> below zero means some farms or workshops stand idle for lack of workers.
+            <strong>Workshops</strong> are shown in three groups: current age, up to three ages back, and older.
+            <strong>City</strong> shows how the city's tiles are used: administration, barracks, current workshops,
+            farms, older workshops, homes and culture; the grey rest is empty.
+        </p>
+        <p>
+            <strong>Limitations:</strong> the table uses the latest city snapshot stored for each member, so a city
+            is only as fresh as that snapshot — check the <strong>City snapshot</strong> column before comparing.
+            Members without a snapshot are listed above the table. The value is a comparison score, not an in-game
+            exchange. Collection hours, the free expansion threshold and the value of luxurious buildings are
+            estimates. Method by Marek Zenft.
+        </p>
+    </div>
 </div>

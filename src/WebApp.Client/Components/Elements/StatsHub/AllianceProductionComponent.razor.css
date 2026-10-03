@@ -1,0 +1,224 @@
+.production-root {
+    --segment-administration: #9e9e9e;
+    --segment-barracks: #8d6e63;
+    --segment-current-workshops: #5c6bc0;
+    --segment-farms: #66bb6a;
+    --segment-old-workshops: #b39ddb;
+    --segment-homes: #ffb74d;
+    --segment-culture: #4dd0e1;
+    --segment-empty: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.intro {
+    margin: 0;
+    font-size: 13px;
+}
+
+.coverage {
+    font-size: 12px;
+}
+
+.missing-members {
+    display: block;
+    opacity: 0.7;
+}
+
+.column-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tabs {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    border: 1px solid var(--fog-border-color);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--fog-text-color);
+    padding: 2px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.tab.selected {
+    background-color: var(--fog-border-color);
+}
+
+.checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    font-size: 12px;
+}
+
+.checkboxes label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.picker-label {
+    opacity: 0.7;
+}
+
+.age-block {
+    margin-top: 8px;
+}
+
+.age-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+}
+
+.age-name {
+    font-weight: 600;
+}
+
+.age-summary {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.table-scroll {
+    overflow-x: auto;
+    margin-top: 4px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    white-space: nowrap;
+}
+
+th, td {
+    color: var(--fog-text-color);
+    font-size: 12px;
+    padding: 6px 6px;
+    text-align: right;
+}
+
+th {
+    font-weight: 400;
+    background-color: var(--fog-container-color);
+}
+
+th.sortable {
+    cursor: pointer;
+}
+
+th.sorted-desc::after {
+    content: " ▼";
+}
+
+th.sorted-asc::after {
+    content: " ▲";
+}
+
+.player-column {
+    text-align: left;
+    position: sticky;
+    left: 0;
+    background-color: var(--fog-container-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(127, 127, 127, 0.08);
+}
+
+.muted {
+    opacity: 0.7;
+}
+
+.small {
+    font-size: 11px;
+}
+
+.positive {
+    color: #2e7d32;
+}
+
+.negative {
+    color: #c62828;
+}
+
+.value-cell {
+    font-weight: 600;
+}
+
+.city-cell {
+    min-width: 120px;
+}
+
+.city-bar, .legend-item b {
+    display: flex;
+    height: 10px;
+    border-radius: 2px;
+    overflow: hidden;
+    background-color: var(--segment-empty);
+}
+
+.city-bar b {
+    display: block;
+    height: 100%;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.legend-item b {
+    width: 12px;
+}
+
+.segment-administration {
+    background-color: var(--segment-administration);
+}
+
+.segment-barracks {
+    background-color: var(--segment-barracks);
+}
+
+.segment-current-workshops {
+    background-color: var(--segment-current-workshops);
+}
+
+.segment-farms {
+    background-color: var(--segment-farms);
+}
+
+.segment-old-workshops {
+    background-color: var(--segment-old-workshops);
+}
+
+.segment-homes {
+    background-color: var(--segment-homes);
+}
+
+.segment-culture {
+    background-color: var(--segment-culture);
+}
+
+.legend-item b.segment-empty {
+    background-color: var(--segment-empty);
+}

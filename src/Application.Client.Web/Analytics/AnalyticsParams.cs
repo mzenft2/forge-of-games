@@ -55,6 +55,7 @@ public static class AnalyticsParams
         {
             public const string ALLIANCE_ATH_RANKINGS = "alliance_ath_rankings";
             public const string ALLIANCE_WOA_RANKINGS = "alliance_woa_rankings";
+            public const string ALLIANCE_PRODUCTION = "alliance_production";
             public const string ALLIANCE_LIST = "alliance_list";
             public const string ALLIANCE_RANKING_CHART = "alliance_ranking_chart";
             public const string BATTLE_TIMELINE = "battle_timeline";

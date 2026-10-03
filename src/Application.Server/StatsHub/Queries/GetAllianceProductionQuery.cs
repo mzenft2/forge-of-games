@@ -143,6 +143,10 @@ public class GetAllianceProductionQueryHandler(
         return new AllianceProductionDto
         {
             MemberCount = members.Count,
+            CoinsPerGood = AllianceProductionCalculator.COINS_PER_GOOD,
+            DailyGoodsFurnaceLimit = AllianceProductionCalculator.DAILY_GOODS_FURNACE_LIMIT,
+            ExpansionArea = expansionArea,
+            FreePremiumExpansions = AllianceProductionCalculator.FREE_PREMIUM_EXPANSIONS,
             Ages = ages,
             MembersWithoutCity = missing.OrderBy(x => x.Name).ToList(),
         };

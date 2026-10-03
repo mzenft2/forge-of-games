@@ -3291,6 +3291,564 @@ namespace Ingweland.Fog.Application.Client.Core.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} players · age median {1}M per day · 1 good = {2} food.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_AgeHeader {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.AgeHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} players · 1 good = {1} food.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_AgeHeader_NoMedian {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.AgeHeader.NoMedian", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_City {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coins as food.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_CoinsAsFood {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.CoinsAsFood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coins / h.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_CoinsPerHour {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.CoinsPerHour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Culture ×.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_CultureUsage {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.CultureUsage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Daily value.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_DailyValue {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.DailyValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ±.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_Deviation {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.Deviation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Empty.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_EmptyTiles {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.EmptyTiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Farms.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_Farms {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.Farms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Food collected / day.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_FoodPerDay {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.FoodPerDay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Food / h.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_FoodPerHour {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.FoodPerHour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Furnace limit.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_FurnaceLimit {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.FurnaceLimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goods as food.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_GoodsAsFood {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.GoodsAsFood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goods / h.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_GoodsPerHour {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.GoodsPerHour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_Player {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.Player", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Premium expansions.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_PremiumExpansions {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.PremiumExpansions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City snapshot.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_SnapshotDate {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.SnapshotDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Without diamonds.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_WithoutDiamonds {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.WithoutDiamonds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Workers.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_Workers {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.Workers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Workshops.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Col_Workshops {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Col.Workshops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ± vs age median.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_ColumnPicker_Deviation {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.ColumnPicker.Deviation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show columns:.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_ColumnPicker_Label {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.ColumnPicker.Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} of {1} members have a city snapshot..
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Coverage {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Coverage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What each member's city produces in a day, counted in one cu [rest of string was truncated].
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Intro {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Administration.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Legend_Administration {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Legend.Administration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Barracks.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Legend_Barracks {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Legend.Barracks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Culture.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Legend_Culture {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Legend.Culture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current workshops.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Legend_CurrentWorkshops {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Legend.CurrentWorkshops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Empty tile.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Legend_EmptyTile {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Legend.EmptyTile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Farms.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Legend_Farms {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Legend.Farms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Homes.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Legend_Homes {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Legend.Homes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Old workshops.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Legend_OldWorkshops {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Legend.OldWorkshops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No city snapshot: {0}.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_MissingMembers {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.MissingMembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click to sort.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_SortHint {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.SortHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tab_All {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tab.All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City build.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tab_CityBuild {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tab.CityBuild", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tab_Production {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tab.Production", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alliance Production.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Title {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} of {1} tiles occupied.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_City {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}/h × 24 h = {1} coins.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_CoinsAsFood {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.CoinsAsFood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to culture usage ratio {0}.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_CultureUsage {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.CultureUsage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to food {0}M.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_DailyValue {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.DailyValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to age median {0}M.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_Deviation {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.Deviation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} tiles of capacity − {1} occupied = {2} free.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_EmptyTiles {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.EmptyTiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} tiles of capacity − {1} occupied = {2} free.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_EmptyTiles_TooSmall {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.EmptyTiles.TooSmall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} farms take {1} tiles.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_Farms {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.Farms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}/h × {1} × 24 h = {2}.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_FoodPerDay {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.FoodPerDay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to what the game shows — it assumes collecting around the clock.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_FoodPerHour {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.FoodPerHour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}/h × 24 h = {1} goods a day.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_FurnaceLimit {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.FurnaceLimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}/h × {1} food per good × 24 h = {2}.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_GoodsAsFood {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.GoodsAsFood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to what the game shows.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_InGameValue {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.InGameValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} purchases of {1} tiles, {2} diamonds in total.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_PremiumExpansions {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.PremiumExpansions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to nothing bought.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_PremiumExpansions_None {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.PremiumExpansions.None", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to when this city was last uploaded to Forge of Games.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_SnapshotDate {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.SnapshotDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} tiles from expansions above the free threshold ({1} purc [rest of string was truncated].
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_WithoutDiamonds_Expansions {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.WithoutDiamonds.Expansions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} tiles of luxurious advantage: {1} farms, {2} homes, {3}  [rest of string was truncated].
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_WithoutDiamonds_Luxurious {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.WithoutDiamonds.Luxurious", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to nothing above the free threshold — the whole value comes fro [rest of string was truncated].
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_WithoutDiamonds_None {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.WithoutDiamonds.None", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} of {1} tiles in total, i.e. {2}% of the city.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_WithoutDiamonds_Share {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.WithoutDiamonds.Share", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to the city has {0} workers.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_Workers_Free {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.Workers.Free", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to the city has {0} workers.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_Workers_Missing {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.Workers.Missing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} from the current age.
+        /// </summary>
+        public static string StatsHub_AllianceProduction_Tooltip_Workshops {
+            get {
+                return ResourceManager.GetString("StatsHub.AllianceProduction.Tooltip.Workshops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Atlantis Division.
         /// </summary>
         public static string StatsHub_WoaDivision_Title {

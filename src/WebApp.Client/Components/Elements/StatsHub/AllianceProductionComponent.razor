@@ -1,0 +1,481 @@
+@using Blazored.LocalStorage
+@using Ingweland.Fog.Application.Client.Core.Localization
+@using Ingweland.Fog.Application.Client.Web.StatsHub.ViewModels
+@using Ingweland.Fog.Application.Core.Helpers
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<FogResource> Loc
+@inject ILocalStorageService LocalStorage
+<div class="production-root">
+    <p class="intro">@Loc[FogResource.StatsHub_AllianceProduction_Intro]</p>
+    <div class="coverage">
+        @Loc[FogResource.StatsHub_AllianceProduction_Coverage, Production.MembersWithCityCount, Production.MemberCount]
+        @if (Production.MembersWithoutCity.Count > 0)
+        {
+            <span class="missing-members">
+                @Loc[FogResource.StatsHub_AllianceProduction_MissingMembers, string.Join(", ", Production.MembersWithoutCity)]
+            </span>
+        }
+    </div>
+
+    <div class="column-picker">
+        <div class="tabs">
+            <button class="@TabClass(null)" @onclick="@(() => SelectGroup(null))">
+                @Loc[FogResource.StatsHub_AllianceProduction_Tab_All]
+            </button>
+            <button class="@TabClass(ColumnGroup.Production)" @onclick="@(() => SelectGroup(ColumnGroup.Production))">
+                @Loc[FogResource.StatsHub_AllianceProduction_Tab_Production]
+            </button>
+            <button class="@TabClass(ColumnGroup.CityBuild)" @onclick="@(() => SelectGroup(ColumnGroup.CityBuild))">
+                @Loc[FogResource.StatsHub_AllianceProduction_Tab_CityBuild]
+            </button>
+        </div>
+        <div class="checkboxes">
+            <span class="picker-label">@Loc[FogResource.StatsHub_AllianceProduction_ColumnPicker_Label]</span>
+            @foreach (var column in Columns)
+            {
+                <label>
+                    <input type="checkbox" checked="@_visibleColumns.Contains(column.Id)"
+                           @onchange="@(e => ToggleColumn(column.Id, e.Value is true))"/>
+                    @Loc[column.PickerLabelKey]
+                </label>
+            }
+        </div>
+    </div>
+
+    @foreach (var age in Production.Ages)
+    {
+        <div class="age-block">
+            <div class="age-header">
+                <span class="age-name">@age.AgeName</span>
+                <span class="age-summary">
+                    @if (age.MedianDailyValueFormatted != null)
+                    {
+                        @Loc[FogResource.StatsHub_AllianceProduction_AgeHeader, age.Members.Count,
+                            age.MedianDailyValueFormatted, age.GoodsToFoodRateFormatted]
+                    }
+                    else
+                    {
+                        @Loc[FogResource.StatsHub_AllianceProduction_AgeHeader_NoMedian, age.Members.Count,
+                            age.GoodsToFoodRateFormatted]
+                    }
+                </span>
+            </div>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                    <tr>
+                        <th class="player-column">@Loc[FogResource.StatsHub_AllianceProduction_Col_Player]</th>
+                        @foreach (var column in VisibleColumns)
+                        {
+                            <th class="@HeaderClass(column)" title="@(column.Sort != null ? Loc[FogResource.StatsHub_AllianceProduction_SortHint].Value : null)"
+                                @onclick="@(() => SortBy(column))">
+                                @Loc[column.HeaderKey]
+                            </th>
+                        }
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var m in Sort(age.Members))
+                    {
+                        <tr>
+                            <td class="player-column">
+                                <a class="anchor-inherited-style" href="@FogUrlBuilder.PageRoutes.Player(m.Data.PlayerId)">
+                                    @m.Data.PlayerName
+                                </a>
+                            </td>
+                            @foreach (var column in VisibleColumns)
+                            {
+                                @RenderCell(column.Id, m)
+                            }
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+
+    <div class="legend">
+        @foreach (var segment in Enum.GetValues<AllianceProductionCityBarSegmentType>())
+        {
+            <span class="legend-item"><b class="@SegmentClass(segment)"></b>@Loc[LegendKey(segment)]</span>
+        }
+        <span class="legend-item"><b class="segment-empty"></b>@Loc[FogResource.StatsHub_AllianceProduction_Legend_EmptyTile]</span>
+    </div>
+</div>
+
+@code {
+
+    private const string VISIBLE_COLUMNS_KEY = "AllianceProductionColumns";
+
+    // Built on each access, so that headers follow the current UI culture
+    private static IReadOnlyList<ColumnDefinition> Columns =>
+    [
+        new(ColumnId.DailyValue, ColumnGroup.Common, FogResource.StatsHub_AllianceProduction_Col_DailyValue,
+            m => m.Data.DailyValue),
+        new(ColumnId.Deviation, ColumnGroup.Common, FogResource.StatsHub_AllianceProduction_Col_Deviation,
+            m => m.Data.DeviationFromMedianPercent, FogResource.StatsHub_AllianceProduction_ColumnPicker_Deviation),
+        new(ColumnId.City, ColumnGroup.Common, FogResource.StatsHub_AllianceProduction_Col_City, null),
+        new(ColumnId.FoodPerHour, ColumnGroup.Production, FogResource.StatsHub_AllianceProduction_Col_FoodPerHour,
+            m => m.Data.FoodPerHour),
+        new(ColumnId.FoodPerDay, ColumnGroup.Production, FogResource.StatsHub_AllianceProduction_Col_FoodPerDay,
+            m => m.Data.FoodPerDay),
+        new(ColumnId.GoodsPerHour, ColumnGroup.Production, FogResource.StatsHub_AllianceProduction_Col_GoodsPerHour,
+            m => m.Data.GoodsPerHour),
+        new(ColumnId.GoodsAsFood, ColumnGroup.Production, FogResource.StatsHub_AllianceProduction_Col_GoodsAsFood,
+            m => m.Data.GoodsAsFoodPerDay),
+        new(ColumnId.FurnaceLimit, ColumnGroup.Production, FogResource.StatsHub_AllianceProduction_Col_FurnaceLimit,
+            m => m.Data.FurnaceLimitPercent),
+        new(ColumnId.CoinsPerHour, ColumnGroup.Production, FogResource.StatsHub_AllianceProduction_Col_CoinsPerHour,
+            m => m.Data.CoinsPerHour),
+        new(ColumnId.CoinsAsFood, ColumnGroup.Production, FogResource.StatsHub_AllianceProduction_Col_CoinsAsFood,
+            m => m.Data.CoinsAsFoodPerDay),
+        new(ColumnId.Farms, ColumnGroup.CityBuild, FogResource.StatsHub_AllianceProduction_Col_Farms,
+            m => m.Data.Farms),
+        new(ColumnId.Workshops, ColumnGroup.CityBuild, FogResource.StatsHub_AllianceProduction_Col_Workshops,
+            m => m.Data.CurrentWorkshops),
+        new(ColumnId.Workers, ColumnGroup.CityBuild, FogResource.StatsHub_AllianceProduction_Col_Workers,
+            m => m.Data.FreeWorkers),
+        new(ColumnId.CultureUsage, ColumnGroup.CityBuild, FogResource.StatsHub_AllianceProduction_Col_CultureUsage,
+            m => m.Data.CultureUsageRatio),
+        new(ColumnId.EmptyTiles, ColumnGroup.CityBuild, FogResource.StatsHub_AllianceProduction_Col_EmptyTiles,
+            m => m.Data.EmptyArea),
+        new(ColumnId.PremiumExpansions, ColumnGroup.CityBuild,
+            FogResource.StatsHub_AllianceProduction_Col_PremiumExpansions, m => m.Data.PremiumExpansionCount),
+        new(ColumnId.WithoutDiamonds, ColumnGroup.CityBuild,
+            FogResource.StatsHub_AllianceProduction_Col_WithoutDiamonds, m => m.Data.DailyValueWithoutDiamonds),
+        new(ColumnId.SnapshotDate, ColumnGroup.CityBuild, FogResource.StatsHub_AllianceProduction_Col_SnapshotDate,
+            m => m.Data.SnapshotDate.DayNumber),
+    ];
+
+    private ColumnGroup? _selectedGroup;
+    private bool _sortDescending = true;
+    private ColumnId _sortColumn = ColumnId.DailyValue;
+    private HashSet<ColumnId> _visibleColumns = Enum.GetValues<ColumnId>().ToHashSet();
+
+    [Parameter]
+    [EditorRequired]
+    public required AllianceProductionViewModel Production { get; set; }
+
+    private IEnumerable<ColumnDefinition> VisibleColumns => Columns.Where(x => _visibleColumns.Contains(x.Id));
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var saved = await LocalStorage.GetItemAsync<List<ColumnId>>(VISIBLE_COLUMNS_KEY);
+            if (saved is {Count: > 0})
+            {
+                _visibleColumns = saved.ToHashSet();
+            }
+        }
+        catch (Exception e)
+        {
+            Console.Error.WriteLine(e);
+        }
+    }
+
+    private Task SelectGroup(ColumnGroup? group)
+    {
+        _selectedGroup = group;
+        _visibleColumns = Columns.Where(x => group == null || x.Group == ColumnGroup.Common || x.Group == group)
+            .Select(x => x.Id).ToHashSet();
+        return SaveVisibleColumnsAsync();
+    }
+
+    private Task ToggleColumn(ColumnId column, bool isVisible)
+    {
+        _selectedGroup = null;
+        if (isVisible)
+        {
+            _visibleColumns.Add(column);
+        }
+        else
+        {
+            _visibleColumns.Remove(column);
+        }
+
+        return SaveVisibleColumnsAsync();
+    }
+
+    private async Task SaveVisibleColumnsAsync()
+    {
+        try
+        {
+            await LocalStorage.SetItemAsync(VISIBLE_COLUMNS_KEY, _visibleColumns.ToList());
+        }
+        catch (Exception e)
+        {
+            Console.Error.WriteLine(e);
+        }
+    }
+
+    private void SortBy(ColumnDefinition column)
+    {
+        if (column.Sort == null)
+        {
+            return;
+        }
+
+        if (_sortColumn == column.Id)
+        {
+            _sortDescending = !_sortDescending;
+        }
+        else
+        {
+            _sortColumn = column.Id;
+            _sortDescending = true;
+        }
+    }
+
+    private IEnumerable<AllianceMemberProductionViewModel> Sort(IEnumerable<AllianceMemberProductionViewModel> members)
+    {
+        var sort = Columns.First(x => x.Id == _sortColumn).Sort!;
+        // members without a value always go to the bottom
+        var withValue = members.Where(x => sort(x) != null);
+        var sorted = _sortDescending ? withValue.OrderByDescending(sort) : withValue.OrderBy(sort);
+        return sorted.Concat(members.Where(x => sort(x) == null));
+    }
+
+    private string TabClass(ColumnGroup? group)
+    {
+        return _selectedGroup == group ? "tab selected" : "tab";
+    }
+
+    private string HeaderClass(ColumnDefinition column)
+    {
+        if (column.Sort == null)
+        {
+            return string.Empty;
+        }
+
+        if (column.Id != _sortColumn)
+        {
+            return "sortable";
+        }
+
+        return _sortDescending ? "sortable sorted-desc" : "sortable sorted-asc";
+    }
+
+    private static string SegmentClass(AllianceProductionCityBarSegmentType type)
+    {
+        return type switch
+        {
+            AllianceProductionCityBarSegmentType.Administration => "segment-administration",
+            AllianceProductionCityBarSegmentType.Barracks => "segment-barracks",
+            AllianceProductionCityBarSegmentType.CurrentWorkshops => "segment-current-workshops",
+            AllianceProductionCityBarSegmentType.Farms => "segment-farms",
+            AllianceProductionCityBarSegmentType.OldWorkshops => "segment-old-workshops",
+            AllianceProductionCityBarSegmentType.Homes => "segment-homes",
+            AllianceProductionCityBarSegmentType.Culture => "segment-culture",
+            _ => string.Empty,
+        };
+    }
+
+    private static string LegendKey(AllianceProductionCityBarSegmentType type)
+    {
+        return type switch
+        {
+            AllianceProductionCityBarSegmentType.Administration =>
+                FogResource.StatsHub_AllianceProduction_Legend_Administration,
+            AllianceProductionCityBarSegmentType.Barracks => FogResource.StatsHub_AllianceProduction_Legend_Barracks,
+            AllianceProductionCityBarSegmentType.CurrentWorkshops =>
+                FogResource.StatsHub_AllianceProduction_Legend_CurrentWorkshops,
+            AllianceProductionCityBarSegmentType.Farms => FogResource.StatsHub_AllianceProduction_Legend_Farms,
+            AllianceProductionCityBarSegmentType.OldWorkshops =>
+                FogResource.StatsHub_AllianceProduction_Legend_OldWorkshops,
+            AllianceProductionCityBarSegmentType.Homes => FogResource.StatsHub_AllianceProduction_Legend_Homes,
+            AllianceProductionCityBarSegmentType.Culture => FogResource.StatsHub_AllianceProduction_Legend_Culture,
+            _ => string.Empty,
+        };
+    }
+
+    private RenderFragment RenderCell(ColumnId column, AllianceMemberProductionViewModel m) => column switch
+    {
+        ColumnId.DailyValue => @<td class="value-cell"
+                                    title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_DailyValue, m.FoodPerDayFormatted, m.GoodsAsFoodFormatted, m.CoinsAsFoodFormatted, m.DailyValueFormatted]">
+                                    @m.DailyValueFormatted
+                                </td>,
+        ColumnId.Deviation => DeviationCell(m),
+        ColumnId.City => @<td class="city-cell"
+                              title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_City, m.Data.TotalArea - m.Data.EmptyArea, m.Data.TotalArea]">
+                              <div class="city-bar">
+                                  @foreach (var segment in m.CityBarSegments)
+                                  {
+                                      <b class="@SegmentClass(segment.Type)"
+                                         style="@($"width:{segment.Percent.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)}%")"></b>
+                                  }
+                              </div>
+                          </td>,
+        ColumnId.FoodPerHour => @<td class="muted"
+                                     title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_FoodPerHour, m.FoodPerDayFormatted, m.FoodPerDayNonStopFormatted]">
+                                     @m.Data.FoodPerHour.ToString("N0")
+                                 </td>,
+        ColumnId.FoodPerDay => @<td
+                                    title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_FoodPerDay, m.Data.FoodPerHour.ToString("N0"), m.Data.FoodCollectionFactor.ToString("N2"), m.Data.FoodPerDay.ToString("N0"), Math.Round(m.Data.FoodCollectionFactor * 24, 1)]">
+                                    @m.FoodPerDayFormatted
+                                </td>,
+        ColumnId.GoodsPerHour => @<td class="muted">@m.Data.GoodsPerHour.ToString("N0")</td>,
+        ColumnId.GoodsAsFood => @<td
+                                     title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_GoodsAsFood, m.Data.GoodsPerHour.ToString("N0"), m.GoodsToFoodRateFormatted, m.Data.GoodsAsFoodPerDay.ToString("N0")]">
+                                     @m.GoodsAsFoodFormatted
+                                 </td>,
+        ColumnId.FurnaceLimit => @<td class="muted"
+                                      title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_FurnaceLimit, m.Data.GoodsPerHour.ToString("N0"), (m.Data.GoodsPerHour * 24).ToString("N0"), Production.DailyGoodsFurnaceLimit.ToString("N0"), m.Data.FurnaceLimitPercent]">
+                                      @($"{m.Data.FurnaceLimitPercent}%")
+                                  </td>,
+        ColumnId.CoinsPerHour => @<td class="muted" title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_InGameValue]">
+                                      @m.Data.CoinsPerHour.ToString("N0")
+                                  </td>,
+        ColumnId.CoinsAsFood => @<td
+                                     title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_CoinsAsFood, m.Data.CoinsPerHour.ToString("N0"), (m.Data.CoinsPerHour * 24).ToString("N0"), Math.Round(m.Data.CoinsPerHour * 24 / Production.CoinsPerGood).ToString("N0"), m.GoodsToFoodRateFormatted, m.Data.CoinsAsFoodPerDay.ToString("N0")]">
+                                     @m.CoinsAsFoodFormatted
+                                 </td>,
+        ColumnId.Farms => @<td
+                               title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_Farms, m.Data.Farms, m.Data.FarmArea.ToString("N0"), m.Data.Farms > 0 ? Math.Round((double) m.Data.FarmArea / m.Data.Farms) : 0, m.Data.FoodPerHour.ToString("N0"), m.Data.FarmArea > 0 ? Math.Round((double) m.Data.FoodPerHour / m.Data.FarmArea).ToString("N0") : "0"]">
+                               @m.Data.Farms
+                           </td>,
+        ColumnId.Workshops => @<td class="workshops-cell"
+                                   title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_Workshops, m.Data.CurrentWorkshops, m.Data.RecentWorkshops, m.Data.OlderWorkshops, m.Data.CurrentWorkshops + m.Data.RecentWorkshops + m.Data.OlderWorkshops]">
+                                   <b>@m.Data.CurrentWorkshops</b> · <span>@m.Data.RecentWorkshops</span> · <span class="muted">@m.Data.OlderWorkshops</span>
+                               </td>,
+        ColumnId.Workers => WorkersCell(m),
+        ColumnId.CultureUsage => @<td
+                                      title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_CultureUsage, m.Data.CultureUsageRatio.ToString("N2")]">
+                                      @m.Data.CultureUsageRatio.ToString("N2")
+                                  </td>,
+        ColumnId.EmptyTiles => EmptyTilesCell(m),
+        ColumnId.PremiumExpansions => PremiumExpansionsCell(m),
+        ColumnId.WithoutDiamonds => WithoutDiamondsCell(m),
+        ColumnId.SnapshotDate => @<td class="muted" title="@Loc[FogResource.StatsHub_AllianceProduction_Tooltip_SnapshotDate]">
+                                      @m.SnapshotDateFormatted
+                                  </td>,
+        _ => @<td></td>,
+    };
+
+    private RenderFragment DeviationCell(AllianceMemberProductionViewModel m)
+    {
+        var deviation = m.Data.DeviationFromMedianPercent;
+        var css = deviation switch {> 0 => "positive", < 0 => "negative", _ => "muted"};
+        var text = deviation.HasValue ? $"{(deviation > 0 ? "+" : "")}{deviation}%" : "—";
+        var title = m.MedianDailyValueFormatted != null
+            ? Loc[FogResource.StatsHub_AllianceProduction_Tooltip_Deviation, m.MedianDailyValueFormatted].Value
+            : null;
+        return @<td class="@css" title="@title">@text</td>;
+    }
+
+    private RenderFragment WorkersCell(AllianceMemberProductionViewModel m)
+    {
+        var free = m.Data.FreeWorkers;
+        var title = free < 0
+            ? Loc[FogResource.StatsHub_AllianceProduction_Tooltip_Workers_Missing, m.Data.TotalWorkers, -free].Value
+            : Loc[FogResource.StatsHub_AllianceProduction_Tooltip_Workers_Free, m.Data.TotalWorkers, free].Value;
+        return @<td class="@(free < 0 ? "negative" : "muted")" title="@title">@(free < 0 ? $"{free} ⚠" : $"+{free}")</td>;
+    }
+
+    private RenderFragment EmptyTilesCell(AllianceMemberProductionViewModel m)
+    {
+        var empty = m.Data.EmptyArea;
+        var occupied = m.Data.TotalArea - empty;
+        var title = empty >= 12
+            ? Loc[FogResource.StatsHub_AllianceProduction_Tooltip_EmptyTiles, m.Data.TotalArea, occupied, empty,
+                empty / 12].Value
+            : Loc[FogResource.StatsHub_AllianceProduction_Tooltip_EmptyTiles_TooSmall, m.Data.TotalArea, occupied,
+                empty].Value;
+        var css = empty == 0 ? "positive" : empty > 30 ? "negative" : "muted";
+        return @<td class="@css" title="@title">@(empty == 0 ? "0 ✓" : empty.ToString())</td>;
+    }
+
+    private RenderFragment PremiumExpansionsCell(AllianceMemberProductionViewModel m)
+    {
+        var count = m.Data.PremiumExpansionCount;
+        var next = m.Data.NextPremiumExpansionCost?.ToString("N0") ?? "—";
+        var title = count > 0
+            ? Loc[FogResource.StatsHub_AllianceProduction_Tooltip_PremiumExpansions, count, Production.ExpansionArea,
+                m.Data.PremiumExpansionCost.ToString("N0"), next].Value
+            : Loc[FogResource.StatsHub_AllianceProduction_Tooltip_PremiumExpansions_None, next].Value;
+        return @<td title="@title">
+                   @if (count > 0)
+                   {
+                       @count<span class="muted small"> / @m.Data.PremiumExpansionCost.ToString("N0") 💎</span>
+                   }
+                   else
+                   {
+                       <span>—</span>
+                   }
+               </td>;
+    }
+
+    private RenderFragment WithoutDiamondsCell(AllianceMemberProductionViewModel m)
+    {
+        var lines = new List<string>();
+        if (m.Data.DiamondExpansionArea > 0)
+        {
+            lines.Add(Loc[FogResource.StatsHub_AllianceProduction_Tooltip_WithoutDiamonds_Expansions,
+                m.Data.DiamondExpansionArea, m.Data.PremiumExpansionCount, Production.FreePremiumExpansions].Value);
+        }
+
+        if (m.Data.LuxuriousAdvantageArea > 0)
+        {
+            lines.Add(Loc[FogResource.StatsHub_AllianceProduction_Tooltip_WithoutDiamonds_Luxurious,
+                m.Data.LuxuriousAdvantageArea, m.Data.LuxuriousFarms, m.Data.LuxuriousHomes,
+                m.Data.LuxuriousCultureSites].Value);
+        }
+
+        if (lines.Count > 0)
+        {
+            lines.Add(Loc[FogResource.StatsHub_AllianceProduction_Tooltip_WithoutDiamonds_Share,
+                m.Data.DiamondExpansionArea + m.Data.LuxuriousAdvantageArea, m.Data.TotalArea,
+                m.WithoutDiamondsSharePercent, m.DailyValueFormatted, m.WithoutDiamondsFactorFormatted,
+                m.WithoutDiamondsFormatted].Value);
+        }
+        else
+        {
+            lines.Add(Loc[FogResource.StatsHub_AllianceProduction_Tooltip_WithoutDiamonds_None].Value);
+        }
+
+        return @<td class="@(m.WithoutDiamondsSharePercent >= 25 ? "negative" : "")" title="@string.Join("\n", lines)">
+                   @m.WithoutDiamondsFormatted
+               </td>;
+    }
+
+    private enum ColumnGroup
+    {
+        Common,
+        Production,
+        CityBuild,
+    }
+
+    private enum ColumnId
+    {
+        DailyValue,
+        Deviation,
+        City,
+        FoodPerHour,
+        FoodPerDay,
+        GoodsPerHour,
+        GoodsAsFood,
+        FurnaceLimit,
+        CoinsPerHour,
+        CoinsAsFood,
+        Farms,
+        Workshops,
+        Workers,
+        CultureUsage,
+        EmptyTiles,
+        PremiumExpansions,
+        WithoutDiamonds,
+        SnapshotDate,
+    }
+
+    private record ColumnDefinition(
+        ColumnId Id,
+        ColumnGroup Group,
+        string HeaderKey,
+        Func<AllianceMemberProductionViewModel, IComparable?>? Sort,
+        string? PickerKey = null)
+    {
+        public string PickerLabelKey => PickerKey ?? HeaderKey;
+    }
+
+}

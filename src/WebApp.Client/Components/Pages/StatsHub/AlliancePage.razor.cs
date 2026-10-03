@@ -14,6 +14,9 @@ public partial class AlliancePage : StatsHubPageBase
     private bool _athRankingsAreLoading;
     private CancellationTokenSource? _athRankingsCts;
     private bool _canShowChart;
+    private AllianceProductionViewModel? _production;
+    private bool _productionIsLoading;
+    private CancellationTokenSource? _productionCts;
     private Dictionary<string, object> _defaultAnalyticsParameters = [];
     private IReadOnlyCollection<StatsTimedIntValue>? _rankings;
     private bool _rankingsAreLoading;
@@ -82,6 +85,17 @@ public partial class AlliancePage : StatsHubPageBase
         if (expanded)
         {
             await GetWoaRankings();
+        }
+    }
+
+    private async Task ToggleProductionContainer(bool expanded)
+    {
+        AnalyticsService.TrackChartView(AnalyticsEvents.TOGGLE_VIEW, _defaultAnalyticsParameters,
+            AnalyticsParams.Values.Sources.ALLIANCE_PRODUCTION, expanded);
+
+        if (expanded)
+        {
+            await GetProduction();
         }
     }
 
@@ -173,6 +187,42 @@ public partial class AlliancePage : StatsHubPageBase
         catch (Exception e)
         {
             _woaRankingsAreLoading = false;
+            Console.Error.WriteLine(e);
+        }
+    }
+
+    private async Task GetProduction()
+    {
+        if (_production != null)
+        {
+            return;
+        }
+
+        if (_productionCts != null)
+        {
+            await _productionCts.CancelAsync();
+        }
+
+        _productionIsLoading = true;
+        StateHasChanged();
+
+        _productionCts = new CancellationTokenSource();
+
+        try
+        {
+            _production = await StatsHubUiService.GetAllianceProductionAsync(AllianceId, _productionCts.Token);
+            _productionIsLoading = false;
+        }
+        catch (OperationCanceledException _)
+        {
+        }
+        catch (ApiException apiEx) when (apiEx.InnerException is TaskCanceledException)
+        {
+            _productionIsLoading = false;
+        }
+        catch (Exception e)
+        {
+            _productionIsLoading = false;
             Console.Error.WriteLine(e);
         }
     }

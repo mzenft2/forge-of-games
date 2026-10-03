@@ -1,0 +1,35 @@
+@using Ingweland.Fog.Application.Client.Core.Localization
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<FogResource> Loc
+@* Optional support request of the auto layout author. Shown while the layout is already being calculated;
+   closing it does not affect the calculation. Switch: CityPlannerAutoLayoutPage.SHOW_SUPPORT_DIALOG *@
+<MudDialog Style="padding: 24px">
+    <TitleContent>
+        <MudText Typo="Typo.h6">@Loc[FogResource.CityPlanner_AutoLayout_Support_Title]</MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudText>@Loc[FogResource.CityPlanner_AutoLayout_Support_Message]</MudText>
+        <MudText Typo="Typo.body2" Style="opacity: 0.7; margin-top: 8px">
+            @Loc[FogResource.CityPlanner_AutoLayout_Support_Optional]
+        </MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton Variant="Variant.Outlined" OnClick="Close">@Loc[FogResource.Common_Close]</MudButton>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="@SUPPORT_URL" Target="_blank"
+                   rel="noopener" OnClick="Close">
+            @Loc[FogResource.CityPlanner_AutoLayout_Support_Button]
+        </MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    private const string SUPPORT_URL = "https://ko-fi.com/zenmar";
+
+    [CascadingParameter]
+    private IMudDialogInstance MudDialog { get; set; }
+
+    private void Close()
+    {
+        MudDialog.Close();
+    }
+}

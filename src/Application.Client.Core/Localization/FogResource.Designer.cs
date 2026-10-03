@@ -5179,5 +5179,41 @@ namespace Ingweland.Fog.Application.Client.Core.Localization {
                 return ResourceManager.GetString("CityPlanner.AutoLayout.Meta.Keywords", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Better city layout? Help build what comes next..
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Support_Title {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Support.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The auto layout is free, made by Marek Zenft. If it helped y....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Support_Message {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Support.Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Support is optional. Your layout is already being calculated....
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Support_Optional {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Support.Optional", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Support on Ko-fi.
+        /// </summary>
+        public static string CityPlanner_AutoLayout_Support_Button {
+            get {
+                return ResourceManager.GetString("CityPlanner.AutoLayout.Support.Button", resourceCulture);
+            }
+        }
     }
 }

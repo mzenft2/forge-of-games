@@ -10,12 +10,20 @@ using Ingweland.Fog.Models.Fog.Entities;
 using Ingweland.Fog.Models.Hoh.Enums;
 using Ingweland.Fog.WebApp.Client.Components.Pages.Abstractions;
 using Microsoft.AspNetCore.Components;
+using Ingweland.Fog.WebApp.Client.Components.Elements.CityPlanner;
 using Microsoft.JSInterop;
+using MudBlazor;
 
 namespace Ingweland.Fog.WebApp.Client.Components.Pages;
 
 public partial class CityPlannerAutoLayoutPage : FogPageBase
 {
+    /// <summary>
+    ///     Shows the optional Ko-fi support window of the auto layout author when a search starts.
+    ///     Set to false to switch it off; the window never blocks the calculation.
+    /// </summary>
+    private const bool SHOW_SUPPORT_DIALOG = true;
+
     private static readonly string[] OptionalBuildingIds =
     [
         "collectableSchoolV2", "collectableArchitectsStudioV2", "heroAcademy", ZenmarCatalogFactory.TOWER_ID,
@@ -42,6 +50,9 @@ public partial class CityPlannerAutoLayoutPage : FogPageBase
 
     [Inject]
     private CityPlannerNavigationState CityPlannerNavigationState { get; set; }
+
+    [Inject]
+    private IDialogService DialogService { get; set; }
 
     [Inject]
     private IJSRuntime JsRuntime { get; set; }
@@ -218,6 +229,17 @@ public partial class CityPlannerAutoLayoutPage : FogPageBase
         _dotNetRef ??= DotNetObjectReference.Create(this);
         var input = AutoLayoutService.CreateEngineInput(_settings, _catalog);
         await JsRuntime.InvokeVoidAsync("Fog.Webapp.AutoLayout.start", _dotNetRef, input);
+        if (SHOW_SUPPORT_DIALOG)
+        {
+            await DialogService.ShowAsync<AutoLayoutSupportDialog>(null, new DialogOptions
+            {
+                MaxWidth = MaxWidth.Small,
+                FullWidth = true,
+                CloseButton = true,
+                CloseOnEscapeKey = true,
+                BackdropClick = true,
+            });
+        }
     }
 
     private async Task SaveAndOpenAsync()

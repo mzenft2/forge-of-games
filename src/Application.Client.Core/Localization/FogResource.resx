@@ -1780,4 +1780,16 @@
     <data name="CityPlanner.AutoLayout.Meta.Keywords" xml:space="preserve">
         <value>Heroes of History, HoH, city planner, auto layout, city layout, optimizer, Forge of Games</value>
     </data>
+    <data name="CityPlanner.AutoLayout.Support.Title" xml:space="preserve">
+        <value>Better city layout? Help build what comes next.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Support.Message" xml:space="preserve">
+        <value>The auto layout is free, made by Marek Zenft. If it helped you make more of your city, you can support its development with any amount.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Support.Optional" xml:space="preserve">
+        <value>Support is optional. Your layout is already being calculated.</value>
+    </data>
+    <data name="CityPlanner.AutoLayout.Support.Button" xml:space="preserve">
+        <value>Support on Ko-fi</value>
+    </data>
 </root>

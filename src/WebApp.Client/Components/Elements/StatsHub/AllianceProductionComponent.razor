@@ -148,7 +148,6 @@
             m => m.Data.SnapshotDate.DayNumber),
     ];
 
-    private ColumnGroup? _selectedGroup;
     private bool _sortDescending = true;
     private ColumnId _sortColumn = ColumnId.DailyValue;
     private HashSet<ColumnId> _visibleColumns = Enum.GetValues<ColumnId>().ToHashSet();
@@ -175,17 +174,20 @@
         }
     }
 
+    private static HashSet<ColumnId> GroupColumns(ColumnGroup? group)
+    {
+        return Columns.Where(x => group == null || x.Group == ColumnGroup.Common || x.Group == group)
+            .Select(x => x.Id).ToHashSet();
+    }
+
     private Task SelectGroup(ColumnGroup? group)
     {
-        _selectedGroup = group;
-        _visibleColumns = Columns.Where(x => group == null || x.Group == ColumnGroup.Common || x.Group == group)
-            .Select(x => x.Id).ToHashSet();
+        _visibleColumns = GroupColumns(group);
         return SaveVisibleColumnsAsync();
     }
 
     private Task ToggleColumn(ColumnId column, bool isVisible)
     {
-        _selectedGroup = null;
         if (isVisible)
         {
             _visibleColumns.Add(column);
@@ -239,7 +241,9 @@
 
     private string TabClass(ColumnGroup? group)
     {
-        return _selectedGroup == group ? "tab selected" : "tab";
+        // A tab is highlighted only while the visible columns are exactly its set (also after reload and manual
+        // checkbox changes, which used to leave "All" highlighted).
+        return _visibleColumns.SetEquals(GroupColumns(group)) ? "tab selected" : "tab";
     }
 
     private string HeaderClass(ColumnDefinition column)
